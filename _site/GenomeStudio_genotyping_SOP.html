@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+        <meta name="author" content="Dr Hamel Patel and Lee hyuck sang hamel.patel@kcl.ac.uk sang_hyuck.lee@kcl.ac.uk" />
+    
+    
+    <title>GenomeStudio Genotyping QC SOP v.1.6</title>
+
+        <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+        <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+        <script src="site_libs/navigation-1.1/tabsets.js"></script>
+        <link href="site_libs/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+        <script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+        <link href="site_libs/readthedown-0.1/readthedown.css" rel="stylesheet" />
+        <link href="site_libs/readthedown-0.1/readthedown_fonts_embed.css" rel="stylesheet" />
+        <script src="site_libs/readthedown-0.1/readthedown.js"></script>
+    
+    
+    
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
+</head>
+
+<body class="preload">
+
+   	
+         <!-- readthedown start -->   
+   <div id="content" data-toggle="wy-nav-shift">
+     <nav id="nav-top" role="navigation" aria-label="top navigation">
+       <a role="button" href="#" data-toggle="wy-nav-top"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+     </nav>
+         
+   
+      
+      <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="GenomeStudio_genotyping_SOP.html">GenomeStudio QC</a>
+      </li>
+      <li>
+        <a href="COPING_user_guide.html">COPING user guide</a>
+      </li>
+      <li>
+        <a href="README_summary_report.html">COPING output</a>
+      </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </div><!--/.navbar -->
+        
+      <h1 class="title">GenomeStudio Genotyping QC SOP v.1.6</h1>
+      
+         <!-- readthedown authors -->
+   <div id="sidebar">
+    <h2><a href="#content">GenomeStudio Genotyping QC SOP v.1.6</a></h2>
+    <div id="toc">
+      <ul>
+      <li><a href="#introduction">INTRODUCTION</a></li>
+      <li><a href="#recommended-repository-format">RECOMMENDED REPOSITORY FORMAT</a></li>
+      <li><a href="#required-data">REQUIRED DATA</a></li>
+      <li><a href="#inital-genomestudio-settings">INITAL GENOMESTUDIO SETTINGS</a></li>
+      <li><a href="#create-a-new-genotyping-project">CREATE A NEW GENOTYPING PROJECT</a></li>
+      <li><a href="#qc">QC</a>
+      <ul>
+      <li><a href="#how-to-manually-edit-clusters-and-snps">How to manually edit clusters and SNPs</a></li>
+      <li><a href="#check-internal-controls">Check internal controls</a></li>
+      <li><a href="#exclude-poor-performing-samples">Exclude poor performing samples</a></li>
+      <li><a href="#assign-gender-specific-colours">Assign gender-specific colours</a></li>
+      <li><a href="#assign-two-cluster-expectation-to-y-and-mt-chromosomes">Assign two cluster expectation to Y and MT chromosomes</a></li>
+      <li><a href="#y-chromosome">Y Chromosome</a></li>
+      <li><a href="#x-chromosome">X Chromosome</a></li>
+      <li><a href="#mt-chromosome">MT Chromosome</a></li>
+      <li><a href="#xy-chromosome">XY Chromosome</a></li>
+      <li><a href="#autosomal-chromosomes">Autosomal Chromosomes</a></li>
+      <li><a href="#chromosome-0">Chromosome 0</a></li>
+      </ul></li>
+      <li><a href="#gender-estimation">GENDER ESTIMATION</a></li>
+      <li><a href="#update-statistics">UPDATE STATISTICS</a></li>
+      <li><a href="#save-project">SAVE PROJECT</a></li>
+      <li><a href="#create-input-for-coping">CREATE INPUT FOR COPING</a></li>
+      <li><a href="#cnv-still-under-development">CNV (STILL UNDER DEVELOPMENT)</a>
+      <ul>
+      <li><a href="#introduction-and-courses">Introduction and courses</a></li>
+      <li><a href="#genomestudio-basics">GenomeStudio Basics</a></li>
+      <li><a href="#genomestudio---cnvpartition">GenomeStudio - CNVpartition</a></li>
+      <li><a href="#genomestudio---cnv-region-report">GenomeStudio - CNV region report</a></li>
+      <li><a href="#create-input-for-penncnv">Create input for PennCNV</a></li>
+      <li><a href="#ipsychcnv">iPsychCNV</a></li>
+      <li><a href="#cnvruler">CNVRuler</a></li>
+      <li><a href="#ensemblecnv">EnsembleCNV</a></li>
+      </ul></li>
+      <li><a href="#reference">REFERENCE</a></li>
+      </ul>
+    </div>
+    <div id="postamble" data-toggle="wy-nav-shift" class="status">
+                  <p class="author"><span class="glyphicon glyphicon-user"></span> Dr Hamel Patel and Lee hyuck sang <a href="mailto:hamel.patel@kcl.ac.uk" class="email">hamel.patel@kcl.ac.uk</a> <a href="mailto:sang_hyuck.lee@kcl.ac.uk" class="email">sang_hyuck.lee@kcl.ac.uk</a></p>
+                      </div>
+   </div>
+     
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<div id="main">
+<div id="introduction" class="section level1">
+<h1>INTRODUCTION</h1>
+<p>Genotyping microarrays remain a popular tool to explore genetic variants such as single nucleotide polymorphism (SNP) and large structural changes in DNA. The Illumina genotyping arrays accomplish this by using pre-defined oligonucleotide probes designed to hybridise specific regions of genomic DNA, followed by extension using chemically labelled nucleotides. The probe extension binds either red or green fluorescent agents, which can be interpreted by the Illumina specific software GenomeStudio. This software determines the identity of alleles by automated clustering of samples based on the similarity of fluorescent intensity. However, the default clustering algorithm can fail to identity valid clusters and can also assign the wrong genotype to samples due to abnormal intensity patterns. This can be addressed by manually reviewing and recalling of SNPs to increase the reliability, confidence and overall quality of the data, making this an extremely crucial quality control (QC) procedure prior to further QC using PLINK or genetic interpretation. Through processing thousands of human patient samples from various tissue sources and on a variety of Illumina genotyping chips, we have accumulated extensive hands-on experience of transforming raw Illumina genotype intensity data to high-quality analysis-ready data. This includes processing both mainstream and custom content genotyping chips with over 4 million markers per sample. We have developed custom clustering files for each genotyping chip to address common problematic variants, allowing for quick and accurate assignment of genotypes to samples. This reduces the quantity of manual intervention required during the QC process, which effectively reduces the amount of human-introduced biases across batches. The following protocol is a description of the QC steps required to thoroughly process raw Illumina microarray-based genotyping data using the Illumina specific <a href="https://emea.illumina.com/techniques/microarrays/array-data-analysis-experimental-design/genomestudio.html">GenomeStudio</a> software. Following this protocol will convert raw image data to a reliably detected genotype calls (.report) file which can be further processed using our Containerised wOrkflow for Processing IllumiNa Genotyping microarray data <a href="https://github.com/hamelpatel/COPING">(COPING)</a>, to recall and improve the reliability and accuracy of rare variants that may have been missed by GenomeStudio, further improving the quality of the data. For any queries, collaboration request or fee-for-service, please contact the authors.</p>
+<p><strong>Note</strong></p>
+<ul>
+<li>The GenomeStudio software requires a minimum of 100 samples to cluster the data accurately. However, to thoroughly process the sex chromosomes its recommended to have at least 100 male and 100 female samples. Projects with less than a 100 samples are recommended to use pre-defined cluster files to cluster the data.</li>
+<li>This protocol provides procedures to identify problematic SNPs which will require the user to manually review. Users should NOT apply the specified thresholds in this protocol and blindly remove SNPs.</li>
+<li>The time required to QC data primarily depends on the combination of quality of the data, number of samples, number of SNPs, tissue source and compute power.</li>
+<li>It is recommended to QC samples originating from the same tissue sources in a single batch, as DNA quality is known to vary across different tissues (i.e blood, buccal, saliva, etc..). Processing samples originating from different tissue sources can cause issues in clustering, resulting in unreliable genotype calls.</li>
+<li>To manually re-cluster a SNP, hold the “SHIFT” button and position the mouse to the centre of a cluster, the mouse cursor will turn to a “+” symbol. While still holding down the SHIFT key, click and hold the left mouse button and move the cluster to the desired location on the SNP Graph. This process can be repeated multiple times for the same SNP until the user is satisfied with the clustering of the SNP.</li>
+<li>If the user is unsure which cluster samples may belong too, users are advised to leave these samples as uncalled. The downstream QC with the zCall pipeline will attempt to assign these uncalled samples to a cluster using the zCall clustering algorithm.</li>
+<li>When re-clustering, if in doubt, zero the SNP</li>
+<li>Any SNPs “zeroed” will be deemed as uninformative and will be dropped during the zCall QC pipeline.</li>
+<li>Users are advised to read the <a href="https://support.illumina.com/content/dam/illumina-support/documents/documentation/software_documentation/genomestudio/genomestudio-2-0/genomestudio-genotyping-module-v2-user-guide-11319113-01.pdf">GenomeStudio User Guide</a> and the <a href="https://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/05/technote_infinium_genotyping_data_analysis.pdf">Illumnia technical notes to analyse genotype data</a> in GenomeStudio prior to this protocol to understand technical terminology and how to use GenomeStudio.</li>
+<li>GenomeStudio is known to be temperamental and can occasionally crash, losing any unsaved work. It is highly advised to continuously save the project when possible.</li>
+</ul>
+</div>
+<div id="recommended-repository-format" class="section level1">
+<h1>RECOMMENDED REPOSITORY FORMAT</h1>
+<p>The following is an optional data directory format which is useful in organising all the files associated with Genotyping data.</p>
+<ol style="list-style-type: decimal">
+<li>Create the folder directories using the script “create_genotyping_folder_structure.sh” (<strong>Need to add download link</strong>). This will create the following:
+<ul>
+<li>01.Project_information</li>
+<li>02.DATA</li>
+<li>03.dMAPS</li>
+<li>04.Sample_information</li>
+<li>05.GenomeStudio_manifest_and_egt</li>
+<li>06.GenomeStudio_project</li>
+<li>07.GenomeStudio_final_reports</li>
+<li>08.COPING_pipeline_output</li>
+<li>09.CNV</li>
+<li>10.Notes</li>
+<li>README.txt</li>
+</ul></li>
+</ol>
+</div>
+<div id="required-data" class="section level1">
+<h1>REQUIRED DATA</h1>
+<ol style="list-style-type: decimal">
+<li>idat files</li>
+<li>Illumina manifest</li>
+<li>sample sheet</li>
+</ol>
+<p>The Sample Sheet contains information on samples to be imported into GenomeStudio, and is generally provided with the data by the genotyping centre. The Sample Sheet is in a .csv format, should be opened in excel and requires the following columns to be completed.</p>
+<ol style="list-style-type: decimal">
+<li>Sample ID</li>
+<li>SentrixBarcode (chip barcode of where sample has been genotyped)</li>
+<li>SentrixPosition (position on the chip of where the sample has been genotyped)</li>
+<li>Sample_Plate (Plate ID)</li>
+<li>Sample_Well (Well position of sample)</li>
+<li>Sample_Group (optional: Tissue source, i.e saliva, buccal, blood, etc…)</li>
+<li>Gender (optional: F, M, Female or Male, with the first letter always in uppercase. Any other nomenclature will be imported as “Unknown”. Without gender information the sex chromosomes cannot be reliably processed)</li>
+<li>Sample_Name (optional: alias name)</li>
+<li>Replicate (optional: replicate)</li>
+<li>Parent 1 (optional: Father ID)</li>
+<li>Parent 2 (optional: Mother ID)</li>
+<li>Path (Full path to data directory containing the IDAT file for the sample in question)</li>
+</ol>
+<p>The Sample Sheet should be saved in .csv format.</p>
+</div>
+<div id="inital-genomestudio-settings" class="section level1">
+<h1>INITAL GENOMESTUDIO SETTINGS</h1>
+<p>GenomeStudio uses the GenCall algorithm to cluster the raw intensity data and assign genotype calls. The software has default parameters and setting which can be tuned to speed up the QC process. The following applies to GenomeStudio 2.0.4.</p>
+<ol style="list-style-type: decimal">
+<li>Select Tools &gt; Options &gt; Project:
+<ul>
+<li>check “Exclude Female Y-SNPs from SNP Statistics” box</li>
+<li>ensure the “No-call Threshold” is set to 0.15</li>
+<li>click “Use for all New Projects”</li>
+</ul></li>
+<li>Select Tools &gt; Options &gt; Module &gt; Genotyping:
+<ul>
+<li>check the “Use memory-based storage” box. This will massively speed up the clustering process. Sufficient memory is required for this option. We have successfully used this option with a 32GB RAM machine, clustering 1000’s sample.</li>
+</ul></li>
+</ol>
+<p><strong>Note</strong>: GenomeStudio will often reset this to default, users should check these settings every time a project is created/opened.</p>
+</div>
+<div id="create-a-new-genotyping-project" class="section level1">
+<h1>CREATE A NEW GENOTYPING PROJECT</h1>
+<ol style="list-style-type: decimal">
+<li>Select file &gt; New Project &gt; Genotype and follow the GenomeStudio Project Wizard.</li>
+<li>Under “Projects Repository”:
+<ul>
+<li>Navigate to the “06.GenomeStudio_project” folder.</li>
+</ul></li>
+<li>Under “Project Name”:
+<ul>
+<li>Create project as: [PROJECT_NAME]_[DATE]_01.bsc and click “Next”.</li>
+</ul></li>
+<li>Select “use sample sheet to load sample intensities” and click “Next”.</li>
+<li>Specify sample sheet, idat files location, and manifest location, and click “Next”.</li>
+<li>Here we have an option to “import cluster positions from a cluster file” to cluster the data. From experience, we have discovered that using the default Illumina cluster file or a cluster file generated from a different lab from which the data was generated, can lead to poor clustering. This is generally due to laboratory specific variation, which leads to intensity data variation which leads to cluster drifts. We recommend not using a cluster file, but to cluster the data using the data itself. <strong>NOTE</strong> the clustering algorithm requires a minimum of 100 samples to work effectively. Once a Genotype project has been QC’d, the cluster positions can be exported and re-used to cluster new data genotyped on the same genotype chip. To use an existing cluster file, check the “Import cluster positions form a cluster file” box and specify the cluster file (.egt) location. Otherwise, check “Cluster SNP’s”.</li>
+<li>Check “Calculate Sample and SNP Statistics” and “Pre-calculate”.</li>
+<li>Ensure Gen Call Threshold is set at 0.15 and click “Finish” to create the project. Depending on compute power, number of samples/SNPs this may take several minutes to several hours to cluster the data and calculate statistics.</li>
+<li>Once the project has been created, <strong>CHECK SAMPLE NUMBERS IN GENOMESTUDIO MATCH THAT IN SAMPLE SHEET !!!!</strong> If there are any errors in the sample sheet or a sample is not present at the given location, GenomeStudio will not upload the sample in question, and will NOT prompt an error.</li>
+</ol>
+</div>
+<div id="qc" class="section level1">
+<h1>QC</h1>
+<div id="how-to-manually-edit-clusters-and-snps" class="section level2">
+<h2>How to manually edit clusters and SNPs</h2>
+<p>Throughout this protocol, SNPs will need to be manually edited to correctly cluster samples. To manually edit a cluster:</p>
+<ol style="list-style-type: decimal">
+<li>click on the “SNP Graph”</li>
+<li>move the cursor to the centre of a cluster in the “SNP Graph” (over the “+”)</li>
+<li>press and hold the shift key, this will turn the hand into a “cursor arrow”+"</li>
+<li>click and hold, and drag the cluster to the desired location</li>
+</ol>
+<p>Alternatively, users can draw a box (left click and drag) around the sample(s) they want to include or exclude from a cluster in the “SNP Graph”, right click on the highlighted sample(s) and choose from the following options:</p>
+<ol style="list-style-type: decimal">
+<li>Define AA cluster using selected samples</li>
+<li>Define AB cluster using selected samples</li>
+<li>Define BB cluster using selected samples</li>
+<li>Exclude selected samples</li>
+<li>Include selected samples</li>
+</ol>
+<p>If a SNP is found to be unrelaible, the SNP should be removed, also referred to be as zeroed. To do this the user:</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP table”, select the SNP</li>
+<li>right click and select “Zero Selected SNP” or press the “F2” button.</li>
+</ol>
+<p><strong>Note</strong>: users can highlight a number of SNPs and zero them all simultaneously (F2 button does not work on multiple SNPs).</p>
+</div>
+<div id="check-internal-controls" class="section level2">
+<h2>Check internal controls</h2>
+<p>The following information and pictures have been taken from the <a href="https://support.illumina.com/content/dam/illumina-support/courses/eval-inf-controls/story_content/external_files/Infinium_Controls_Training_Guide.pdf">Illumina internal control documentation</a></p>
+<p>To view the internal controls, click on the “Analysis” -&gt; “View Controls dashboard”.</p>
+<p>An overview of the importance of each control is shown below:</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/Figure%200%20internal%20controls.png" alt="" />
+<p class="caption">Figure 1: Overview of Infinium Genotyping Assay Protocol and Steps Where Built-In Controls Come Into Play.</p>
+</div>
+<p>The <strong>Sample-independent controls</strong> are used to evaluate chip performance and are informative of efficiency of hybridization and staining. Sampleindependent controls cannot be used to assess sample quality or to identify issues with sample processing. Even if highly degraded DNA was hybridized to a chip, sample-independent controls are expected to appear normal, given that all steps preceding hybridization were performed according to protocol. This is because DNA targets for sample-independent control probes do not originate from the sample DNA. Target Removal Controls and Hybridization Controls probe targets are spiked into the hybridization buffer. The sample-independent controls include Staining Controls, Extension Controls, Target Removal Controls, and Hybridization Controls. The Restoration Control can also be categorized as sample-independent, since it does not depend on sample quality. However, the Restoration Control is only meaningful when samples were processed with the FFPE Restore kit prior to the Infinium assay.</p>
+<p>The <strong>sample-dependent controls</strong> are used to evaluate assay performance across samples, and assess sample DNA quality. With the exception of Non-Specific Binding Controls, sample-dependent controls are specific to human DNA targets and cannot be used for interpretation of data obtained with non-human Infinium products, including non-human iSelect chips. In addition to poor sample quality, failure of any step in the assay (amplification, hybridization, X-stain) will result in depressed sample-dependent controls. Sample-dependent controls include Stringency Controls, Non-Specific Binding Controls, and Non-Polymorphic Controls.</p>
+<div id="staining-controls-sample-independent" class="section level3">
+<h3>Staining Controls (Sample-Independent)</h3>
+<p>The Staining Controls assess the efficiency of the staining process during the X-Stain protocol. Staining controls consist of beads covered with high levels or small (background) levels of dinitrophenyl (DNP) or biotin, and are directly labeled in successive rounds of adding green fluorescent streptavidin and red fluorescent anti-DNP antibody. Because DNP and biotin are directly attached to the beads, staining controls do not depend on DNA hybridization to the chip and do not require single-base extension. Staining Controls are monitored in both the red and green channels.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/staining%20controls.jpg" alt="" />
+<p class="caption">Figure 2: Staining controls</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Staining Red:
+<ul>
+<li>Strong positive signals are expected for the dinitrophenyl (DNP) (High) data points, while background is expected for the DNP (Bgnd), Biotin (High), and Biotin (Bgnd) signals.</li>
+</ul></li>
+<li>Staining Green:
+<ul>
+<li>Strong positive signals are expected for the Biotin (High) data points, while background is expected for the DNP (High), DNP (Bgnd), and Biotin (Bgnd) data points.</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong> No comparison is made between the levels of positive signal between the red and green channels, nor is there a specific threshold value for the intensities.</p>
+</div>
+<div id="extension-controls-sample-independent" class="section level3">
+<h3>Extension Controls (Sample-Independent)</h3>
+<p>The Extension Controls test the efficiency of single base extension during the X-stain protocol. Extension Controls consist of hairpin oligos that function as both template and probe. During X-stain, probes are extended at the 3’ end using the probe strand itself as a template. Accordingly, extension controls are independent of DNA hybridization, but require successful single base extension and staining. Both red (extension with A or T) and green (extension with C or G) channels are monitored.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/Extention%20controls.jpg" alt="" />
+<p class="caption">Figure 3: Extension Controls</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Extension Red:
+<ul>
+<li>Strong positive signals are expected for Extension (A) and Extension (T) data points, while signals for Extension (C) and Extension (G) are expected to be at background levels.</li>
+</ul></li>
+<li>Extension Green:
+<ul>
+<li>Strong positive signals are expected for Extension (C) and Extension (G) data points, while signals for Extension (A) and Extension (T) are expected to be at background levels.</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong> No comparison is made between the levels of positive signal between the red and green channels, nor is there a specific threshold value for the intensities.</p>
+</div>
+<div id="target-removal-controls-sample-independent" class="section level3">
+<h3>Target Removal Controls (Sample-Independent)</h3>
+<p>The Target Removal Controls test the efficiency of stripping off DNA templates after the extension reaction. The probe sequences are designed such that extension from the probe does not occur. Instead, the control target DNA, added with the hybridization buffer, is extended and labeled using the probe sequence as templates. Target Removal controls should yield signal intensities at background levels. Failure to efficiently remove target DNA will result in an increase in signal intensities over background levels. Target Removal Controls are monitored in the red channel.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/target%20removal%20controls.jpg" alt="" />
+<p class="caption">Figure 4: Target Removal Controls</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Target Removal Red:
+<ul>
+<li>Target removal controls are monitored in the red channel. Levels significantly above background in the red channel indicate inefficient target removal.</li>
+</ul></li>
+<li>Target Removal Green:
+<ul>
+<li>Signal intensity in the green channel is expected to be at background levels</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong> No maximum threshold value is specified. Please note the difference in scale of the Y axis relative to panels for the Staining Controls and the Extension Controls. Compared to positive signals from the Staining and Extension Controls, data points for the Target Removal Control are expected to be at background levels.</p>
+</div>
+<div id="hybridization-controls-sample-independent" class="section level3">
+<h3>Hybridization Controls (Sample-Independent)</h3>
+<p>The Hybridization Controls assess efficiency of DNA hybridization using synthetic targets instead of amplified DNA. These synthetic targets bind to complement probes on the array, and provide templates for single base extension. The synthetic targets are present in the hybridization buffer at three levels, monitoring the response from high-concentration (5 pM), medium concentration (1 pM), and low-concentration (0.2 pM) targets. Hybridization Controls appear in the green channel as signals with various intensities, corresponding to the concentrations at which targets are spiked into the assay. Hybridization Controls require optimal stringency conditions during hybridization and washing of BeadChips, and they depend on successful single base extension and staining.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/Hybridization%20Controls.jpg" alt="" />
+<p class="caption">Figure 5: Hybridization Controls</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Hybridization Red
+<ul>
+<li>The Hybridization Controls are monitored in the green channel.Therefore, signal intensities in the red channel are expected to be at background levels.</li>
+</ul></li>
+<li>Hybridization Green
+<ul>
+<li>Data points at three different intensity levels are expected, at low (black), medium (blue) and high (green) intensities.</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong>While no threshold values for intensities are specified, a distinct separation of signals by low, medium, and high DNA concentrations within a sample is expected.</p>
+</div>
+<div id="restoration-control-sample-independent" class="section level3">
+<h3>Restoration Control (Sample-Independent)</h3>
+<p>The Restoration Control is used to assess the efficiency of DNA restoration in the Infinium HD FFPE protocol. The Restoration Control does not depend on the quality of sample DNA. It should show no activity for samples that have not been processed with the FFPE Restore kit. The Restoration Control uses a short oligo that has been spiked into the Infinium HD FFPE restore kit. Due to the chemistry of the Infinium HD FFPE Restore Kit, the control oligo will be available to bind to its complement on the BeadChip only if the restore process functions properly. Detection of reduced intensity of the Restoration Control may indicate that the DNA restoration process has been compromised. This control is detected in the green channel.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/restoration%20Controls.jpg" alt="" />
+<p class="caption">Figure 6: Restoration Control</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Restoration Red:
+<ul>
+<li>The restoration control is monitored in the green channel. Therefore, signal intensities in the red channel are expected to be at background levels.</li>
+</ul></li>
+<li>Restoration Green:
+<ul>
+<li>Strong signal intensity is only expected if samples were treated with Illumina’s Infinium HD FFPE Restore Kit. Otherwise, data points are expected to be at background levels.</li>
+</ul></li>
+</ol>
+</div>
+<div id="stringency-controls-sample-dependent" class="section level3">
+<h3>Stringency Controls (Sample-Dependent)</h3>
+<p>Perfect Match (PM) and Mis-Match (MM) Stringency Controls assess the stringency of the hybridization process. High stringency is achieved through increased temperature and optimized composition of the hybridization buffer. Perfect match (PM) controls are exactly complementary to their human DNA target, resulting in high signal intensities. In contrast, mismatch (MM) controls probes have mismatched nucleotides between target and probe to affect hybrid stability, and are expected to yield signals of much lower intensity under optimal stringency conditions. Performance of Stringency Controls is monitored in the red channel.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/stringency%20Controls.jpg" alt="" />
+<p class="caption">Figure 7: Stringency Control</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Stringency Red:
+<ul>
+<li>Strong positive signals are expected for String (PM) data points, while String (MM) data points are expected to be at low levels approaching background levels.</li>
+</ul></li>
+<li>Stringency Green:
+<ul>
+<li>The stringency controls are monitored in the red channel. Accordingly, signal intensities in the green channel for String (PM) and String (MM) data points are expected to be at background levels.</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong> No threshold value for intensities is specified. Stringency controls target human DNA; hence, signals at background levels are expected when running a non-human Infinium assay.</p>
+</div>
+<div id="non-specific-binding-controls-sample-dependent" class="section level3">
+<h3>Non-Specific Binding Controls (Sample-Dependent)</h3>
+<p>The Non-Specific Binding Controls test sample quality and specificity of the assay. Non-Specific Binding Controls are included to monitor the specificity with which amplified DNA hybridizes to the chip, assess sample DNA quality, and identify presence of non-human DNA. The probe sequences for Non-specific Binding Controls are complementary to bacterial sequences and should not hybridize to human sequences under standard hybridization conditions. Loss of the specificity of the assay and binding of non-human sequences complementary to control probes are expected to lead to increased signal intensities. These controls are monitored in both, the green and red channel, and should show intensities at background levels in both.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/non-specific%20binding%20controls.jpg" alt="" />
+<p class="caption">Figure 8: Non-Specific Binding Controls</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Non-Specific Binding Red:
+<ul>
+<li>The probe sequences for Non-specific Binding Controls are complementary to bacterial sequences, and signal intensities at background are expected under standard hybridization conditions.</li>
+</ul></li>
+<li>Non-Specific Binding Green:
+<ul>
+<li>The probe sequences for Non-specific Binding Controls are complementary to bacterial sequences, and signal intensities at background are expected under standard hybridization conditions.</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong>No maximum threshold value is specified. Please note the difference in scale of the Y axis relative to panels of Stringency Controls and Non-Polymorphic Controls. Compared to positive signals from Stringency and Non-Polymorphic Controls, data points for the Non-Specific Binding Controls are expected to be at background levels.</p>
+</div>
+<div id="non-polymorphic-controls-sample-dependent" class="section level3">
+<h3>Non-Polymorphic Controls (Sample-Dependent</h3>
+<p>The Non-Polymorphic Controls assess sample quality and the overall performance of the assay by querying non-polymorphic regions of the human genome. Non-Polymorphic Controls test the overall performance of the assay, from amplification to detection, by querying a particular base in a nonpolymorphic region of the human genome. Non-polymorphic Controls are used to compare assay performance across different samples. One non-polymorphic control has been designed for each of the four nucleotides. A and T are monitored in the red channel, and C and G in the green channel.</p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/non-polymorphic%20controls.jpg" alt="" />
+<p class="caption">Figure 9: Non-Polymorphic Controls</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Non-Polymorphic Red:
+<ul>
+<li>Strong positive signals are expected for the red NP (A) and purple NP (T) data points, while the green NP (C) and blue NP (G) signals are expected to be at background levels.</li>
+</ul></li>
+<li>Non-Polymorphic Green:
+<ul>
+<li>Strong positive signals are expected for the green NP (C) and blue NP (G) data points, while the red NP (A) and purple NP (T) signals are expected to be at background levels.</li>
+</ul></li>
+</ol>
+<p><strong>NOTE:</strong>No comparison is made between intensities of positive signals between the red and green channels and A/T and C/G, nor is there a specific threshold value for the intensities. NonPolymorphic controls target human DNA; hence, signals at background levels are expected when running a non-human Infinium assay.</p>
+</div>
+</div>
+<div id="exclude-poor-performing-samples" class="section level2">
+<h2>Exclude poor performing samples</h2>
+<p>This step will remove poor clustering samples that deviate from the remaining samples. These samples interfere with the clustering algorithm and are usually samples with DNA quality. It is not unusual to remove upto 10% of initial samples. Once these samples are removed, we can recluster the data using good quality samples, which will create cleaner tighter clusters and ultimately increase the call rate for the remaining samples.</p>
+<ol style="list-style-type: decimal">
+<li>First look for any obvious batch effects or outlying samples:
+<ul>
+<li>From the Samples Table, create a Scatter Plot of Index vs. p10GC and look for batches of outlier samples (samples with p10GC &lt;0.4).</li>
+</ul></li>
+<li>Samples are then removed based on the clustering algorithm p10GC score:
+<ul>
+<li>Select Analysis &gt; Exclude samples by best run &gt; Use GC10 &gt; Use sample ID</li>
+</ul></li>
+<li>Samples with a low call rate are then removed:
+<ul>
+<li>From the Samples Table, arrange by “Call Rate”, highlight all samples with a call Rate of &lt;0.90, right click and “Exclude Selected Samples”.</li>
+</ul></li>
+<li>Re-cluster all the SNPs using the remaining samples and re-calculate Sample &amp; SNP statistics:
+<ul>
+<li>From the SNP Table, select all &gt; right click on SNPs and “Cluster Selected SNPs”. When prompted, click “yes” to update SNP statistics for the selected SNPs</li>
+</ul></li>
+<li>(Optional) If users are removing a lot of samples, users can first exclude all samples whose call rate is &lt;99%, and then re-cluster with all samples with a call rate &gt;99%. The resulting clusters should be cleaner, albeit at the cost of extra work time. Excluded samples can now be reintroduced back into the project.</li>
+</ol>
+</div>
+<div id="assign-gender-specific-colours" class="section level2">
+<h2>Assign gender-specific colours</h2>
+<p>Throughout the QC process, samples coloured based on gender can be used for QC purposes and to identify sex-specific effects. The same concept can be applied to differentiate samples based on any other phenotype that maybe useful for QC or for discovery, such as sample source, batch, ethnicity, case-control, etc…</p>
+<ol style="list-style-type: decimal">
+<li>From the Samples Table:
+<ul>
+<li>Arrange by “Sex” column and highlight all “Female” samples.</li>
+<li>Right click on these samples &gt; Mark Selected Rows &gt; Add New &gt; write “Female” and change colour to “greenYellow” &gt; select OK. This will highlight female samples in the “SNP Graph”as green</li>
+</ul></li>
+<li>If there are a number of samples with unknown genders, this process can be repeated to highlight male and unknown samples as a different colour.</li>
+</ol>
+</div>
+<div id="assign-two-cluster-expectation-to-y-and-mt-chromosomes" class="section level2">
+<h2>Assign two cluster expectation to Y and MT chromosomes</h2>
+<p>By default, GenomeStudio expects three clusters per SNP, however, for the Y and MT chromosomes, we expect to find only two clusters.</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP Table”, use the “filter rows” button to select only Y and MT chromosome SNPs</li>
+<li>Right click the selected SNPs to launch the context menu</li>
+<li>Select “SNP Properties”</li>
+<li>Set “ExpectedNumberOfClusters” to 2. This will re-cluster the Y and MT SNP’s and set the algorithm to expect 2 clusters rather than 3</li>
+</ol>
+</div>
+<div id="y-chromosome" class="section level2">
+<h2>Y Chromosome</h2>
+<p>Females do not have a Y chromosome, and therefore should not be included in the Y chromosome clusters. GenomeStudio is unable to exclude female samples from the Y chromosome SNPs and are inadvertently clustered, leading to incorrect clusters. Female samples fail to bind the Y chromosome probe and generally lie at the bottom of the SNP graph. These samples need to be manually removed. To speed up the process users can:</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP Table”:
+<ul>
+<li>select “Clear filter”</li>
+</ul></li>
+<li>re-cluster Y chromomsome SNPs using male samples only:
+<ul>
+<li>From the “Samples Table”, arrange by “Gender” column, and highlight all “Female” samples</li>
+<li>Right click on these samples and “Exclude Selected Samples”.</li>
+<li>When prompted “Do you wish to update SNP statistics for all SNPs”, select “No”.</li>
+<li>Next, from the “SNP Table”, use the “filter rows” button to select only Y chromosome SNPs.</li>
+<li>Then use the “select all” button to highlight all Y-chromosome SNPs, right click and select “Cluster Selected SNPs”. If prompted, do not update statistics.</li>
+<li>Now select the female samples that were removed from the “Samples Table” and reintroduce them by right clicking and selecting “Include Selected Sample”. When prompted, “Do you wish to update SNP statistics for all SNPs”, select “No”.</li>
+<li>From the “SNP Table”, “select all” Y-chromosome SNPs, right click and “Update Selected SNP Statistics”.</li>
+</ul></li>
+<li>Female samples are expected not to bind the Y chromosome probe and as a result will exhibit a low binding intensity, which is represented in the “SNP Graph” with a low NormR intensity (~&lt;0.2). However, due to the repetitiveness nature of the Y chromosome and the fact probe sequences are only 50bp, probes targeting the Y chromosome may bind a different region of the genome, resulting in unusually high NormR intensity (~&gt;0.2). Use the following criteria to manually re-cluster or zero an unreliable Y chromosome SNP: + Female samples should be excluded from all clusters + Female samples should have a NormR intensity &lt; 0.2 + No samples should be assigned to the AB Cluster + Arrange by descending call frequency by selecting call frequency column followed by the sort column (descending) tab</li>
+</ol>
+<p><strong>Examples of how to cluster Y chromosome SNPs are shown below</strong></p>
+<div class="figure">
+<img src="GenomeStudio_user_guide/fig%201.png" alt="" />
+<p class="caption">Figure 10: Y chromosome SNPs should not include female samples in any cluster. If you are unable to separate the male and female samples from the cluster, the SNP should be zeroed.</p>
+</div>
+<p><br></p>
+<div class="figure" style="text-align: center">
+<img src="GenomeStudio_user_guide/fig%202a.png" alt="Figure 11: The GenomeStudio clustering algorithm fails to take into consideration that a female sample should not be clustered on Y chromosome SNP’s. In this scenario, the female samples are highlighted in yellow. Clusters are bunched together causing the clustering algorithm to fail and consequently giving the SNP a no call. The heterozygote cluster needs to be manually edited to exclude female samples as shown above." width="49%" height="20%" /><img src="GenomeStudio_user_guide/fig%202b.png" alt="Figure 11: The GenomeStudio clustering algorithm fails to take into consideration that a female sample should not be clustered on Y chromosome SNP’s. In this scenario, the female samples are highlighted in yellow. Clusters are bunched together causing the clustering algorithm to fail and consequently giving the SNP a no call. The heterozygote cluster needs to be manually edited to exclude female samples as shown above." width="49%" height="20%" />
+<p class="caption">
+Figure 11: The GenomeStudio clustering algorithm fails to take into consideration that a female sample should not be clustered on Y chromosome SNP’s. In this scenario, the female samples are highlighted in yellow. Clusters are bunched together causing the clustering algorithm to fail and consequently giving the SNP a no call. The heterozygote cluster needs to be manually edited to exclude female samples as shown above.
+</p>
+</div>
+<p><br></p>
+<div class="figure" style="text-align: center">
+<img src="GenomeStudio_user_guide/3a.png" alt="Figure 12: Female samples represented by the yellow dots should not have Y chromosome SNP’s. The female samples should be manually excluded from the heterozygote cluster as shown above." width="49%" height="20%" /><img src="GenomeStudio_user_guide/3b.png" alt="Figure 12: Female samples represented by the yellow dots should not have Y chromosome SNP’s. The female samples should be manually excluded from the heterozygote cluster as shown above." width="49%" height="20%" />
+<p class="caption">
+Figure 12: Female samples represented by the yellow dots should not have Y chromosome SNP’s. The female samples should be manually excluded from the heterozygote cluster as shown above.
+</p>
+</div>
+</div>
+<div id="x-chromosome" class="section level2">
+<h2>X Chromosome</h2>
+<p>Males have a single X chromosome, therefore, X SNPs should have no male subjects in the heterozygote cluster (AB). Due to the high number of X chromosome SNPs, its time-effective to remove male samples from the project and re-cluster the X-chromosome SNPs based only on female samples:</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP Table”:
+<ul>
+<li>select “Clear filter”</li>
+</ul></li>
+<li>From the “Samples Table”:
+<ul>
+<li>Arrange by “Gender” column and highlight all “Male” samples.</li>
+<li>Right click on these samples and “Exclude Selected Samples”. When prompted “Do you wish to update SNP statistics for all SNPs”, select “No”.<br />
+</li>
+</ul></li>
+<li>From the “SNP Table”:
+<ul>
+<li>Use the “filter rows” button to select only X chromosome SNPs.</li>
+<li>Use the “select all” button to highlight all X-chromosome SNPs</li>
+<li>Right click and select “Cluster Selected SNPs”. If prompted, do not update statistics.</li>
+</ul></li>
+<li>From the “Samples Table”:
+<ul>
+<li>Select the male samples that were removed and reintroduce them by right clicking and selecting “Include Selected Sample”. When prompted, “Do you wish to update SNP statistics for all SNPs”, select “No”.</li>
+</ul></li>
+<li>From the SNP Table:
+<ul>
+<li>“select all” X-chromosome SNPs, right click and “Update Selected SNP Statistics”.</li>
+<li>Use the “filter rows” button to select “Chr=X”</li>
+<li>Arrange SNPs by descending AB Frequency by selecting the “AB Freq” column followed by the “sort column (descending)” tab.</li>
+<li>Review these SNPs and ensure no Male sample is assigned to in the heterozygote (AB) cluster</li>
+</ul></li>
+</ol>
+</div>
+<div id="mt-chromosome" class="section level2">
+<h2>MT Chromosome</h2>
+<p>The MT chromosome is maternally inherited, and should not show any heterozygote clusters.</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP Table”:
+<ul>
+<li>Select “Clear filter”</li>
+<li>Use the “filter rows” button to select only MT chromosome SNPs and arrange by descending AB Frequency by selecting the “AB Freq” column followed by the “sort column (descending)” tab. Manually review all SNPs, ensuring there are no heterozygote clusters</li>
+</ul></li>
+</ol>
+</div>
+<div id="xy-chromosome" class="section level2">
+<h2>XY Chromosome</h2>
+<p>The XY SNP’s are are known as the Pseudoautosomal (PAR) SNPs and are present on both X and Y chromosomes.</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP Table”:
+<ul>
+<li>Select “Clear filter”</li>
+<li>Use the “filter rows” button to select only XY chromosome SNPs. These are PAR SNPs may show male heterozygotes. The XY chromosome should be treated as an autosomal chromosome.</li>
+</ul></li>
+</ol>
+</div>
+<div id="autosomal-chromosomes" class="section level2">
+<h2>Autosomal Chromosomes</h2>
+<p>The following steps will identify potential problematic SNPs which need to be manually reviewed and if necessary, edited or removed. As the X, Y and MT chromosomes have already been reviewed, these SNP’s should be excluded from all following filters. Ensure you include the XY chromosome in the autosomal chromosome. The following filters are all applied from the “SNP Table” window by slecting the “Filter Table Rows” tab. Some filters need to be selected from the “Sub Columns” window which can be activated by selecting the chip name in the “Columns” window</p>
+<ol style="list-style-type: decimal">
+<li>Exclude the X Y and MT chromosomes (apply this to all the following filters):
+<ul>
+<li>From the SNP Table, use the “filter rows” button to select “Chr != X” and “Chr != Y” and “Chr != MT”</li>
+</ul></li>
+<li>Review all SNPs that have failed to cluster:
+<ul>
+<li>Filter only SNPs with a call rate of zero and manually re-cluster if possible.</li>
+</ul></li>
+<li>Identify low intensity SNPs (see figure 13):
+<ul>
+<li>From Columns select “AB Freq != 0” and the chip name to activate the “sub columns” window. Then from “sub columns” window select “AB R mean” &lt; 0.2</li>
+<li>From Columns select “AA Freq != 0” and the chip name to activate the “sub columns” window. Then from “sub columns” window select “AA R mean” &lt; 0.2</li>
+<li>From Columns select “BB Freq != 0” and the chip name to activate the “sub columns” window. Then from “sub columns” window select “BB R mean” &lt; 0.2</li>
+</ul></li>
+</ol>
+<div class="figure">
+<img src="GenomeStudio_user_guide/fig%205.png" alt="" />
+<p class="caption">Figure 13: This shows an example of a low intensity SNP where all the heterozygote and homozygote clusters have a low Norm R intensity and they cannot be clearly differentiated from one another. This SNP should be zeroed.</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Identify clusters that are very close. These maybe fused/over-lapping clusters that can be clearly separated. If they cannot be separated then these SNPs should be zeroed (see figure 14):
+<ul>
+<li>Cluster Sep &lt; 0.35"</li>
+<li>Arrange the data by selecting the sort by descending “Cluster sep” column</li>
+</ul></li>
+</ol>
+<div class="figure">
+<img src="GenomeStudio_user_guide/fig%206.png" alt="" />
+<p class="caption">Figure 14: Using the cluster separation filter can help identify merged clusters. In this SNP the heterozygote and homozygote clusters cannot be clearly distinguished from one another, therefore this SNP should be zeroed.</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Identify SNP’s with unusually levels of samples in heterozygote (AB) cluster:
+<ul>
+<li>AB frequency &gt; 0.6 (based on AB count)</li>
+<li>AB frequency = 0 and minor allele frequency &gt; 0</li>
+<li>AA frequency = 1 and Call Freq &lt; 1 (Identify missed AB calls. If the number of SNPs to review are high, then call Freq can be reduced, e.g Call Freq = 0.98)</li>
+<li>BB frequency = 1 and Call Freq &lt; 1 (Identify missed AB calls. If the number of SNPs to review are high, then call Freq can be reduced, e.g Call Freq = 0.98)</li>
+<li>Het excess &gt; 0.3 (based on Hardy-Weinberg Equilibrium, see figure 15)</li>
+<li>Het excess &lt; -0.3 (will identify deficient heterozygote calls relative to expected based on Hardy-Weinberg Equilibrium, see figure 16)</li>
+</ul></li>
+</ol>
+<div class="figure">
+<img src="GenomeStudio_user_guide/fig%207.png" alt="" />
+<p class="caption">Figure 15: The Het excess &gt;0.3 or AB frequency &gt; 0.6 filter can identify merged clusters. There are two distinct clusters classified as heterozygous and they can be separated into a homozygous and a heterozygous cluster by manually clustering. If the minimum cluster algorithm does not allow this then the SNP should be zeroed</p>
+</div>
+<div class="figure">
+<img src="GenomeStudio_user_guide/fig%208.png" alt="" />
+<p class="caption">Figure 16: Using the Het excess &lt; 0.3 filter will identify deficient heterozygote clusters based on expected by Hardy-Weinberg Equilibrium. This SNP has two distinct clusters within the AA homozygote and therefore should be manually separated if possible or zeroed out.</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Identify SNP’s where their clusters are outside their expected position:
+<ul>
+<li>AA theta mean &gt; 0.3 and AA Freq !=0</li>
+<li>BB theta mean &lt; 0.7 and BB Freq !=0</li>
+<li>AB theta mean &lt; 0.3 and AB Freq !=0</li>
+<li>AB theta mean &gt; 0.7 and AB Freq !=0</li>
+</ul></li>
+<li>Identify unusually large clusters (see figure 17):
+<ul>
+<li>AA theta deviation &gt; 0.025</li>
+<li>AB theta deviation ≥ 0.07</li>
+<li>BB theta deviation &gt; 0.025</li>
+</ul></li>
+</ol>
+<div class="figure">
+<img src="GenomeStudio_user_guide/fig%209.png" alt="" />
+<p class="caption">Figure 17: This SNP has diffused or “fat” clusters which cannot be clearly differentiated from one another; therefore this SNP should be zeroed.</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Identify SNPs where the Genomestudio algorithm has low confidence in clustering:
+<ul>
+<li>SNPs with GenTrain scores of &lt;0.7 Edited !=1</li>
+</ul></li>
+</ol>
+</div>
+<div id="chromosome-0" class="section level2">
+<h2>Chromosome 0</h2>
+<p>During manifest creation, the probe sequence is mapped to the genome build notated in the GenomeBuild column in the manifest. The SNP or indel coordinate is then recorded in the MapInfo column. If a marker is annotated with Chr = 0 or MapInfo = 0 in the manifest, there are two possible explanations:</p>
+<ol style="list-style-type: decimal">
+<li>No valid mapping for the probe.</li>
+<li>More than 1 best-scoring mapping for the probe.</li>
+</ol>
+<p>How do I find out why a probe is mapped to Chr 0?</p>
+<p>For loci assigned a zero for Chr/MapInfo in the manifest, refer to the Mapping Comments file found in the product support files at Illumina.com. This file provides the reason for the notation:</p>
+<pre><code>+ Blank – There were no complications in mapping the location of the variant.
++ No probe mappings – The Chr and MapInfo fields in the manifest have been set to 0, as no valid alignments were identified for the probe sequence in the updated genome build.
++ Multiple mappings – The Chr and MapInfo fields in the manifest have been set to 0, as multiple best scoring alignments were identified for the probe sequence. The locations of the multiple mappings are supplied as a semi-colon delimited list.</code></pre>
+<p>During QC, chromosome 0 SNPs are treated as autosomal and are included in the autosomal SNP QC process.</p>
+</div>
+</div>
+<div id="gender-estimation" class="section level1">
+<h1>GENDER ESTIMATION</h1>
+<p>GenomeStudio uses the X chromosome to estimate the gender of samples. Therefore, the X chromosome must under go QC prior to estimating gender. To estimate the gender:</p>
+<ol style="list-style-type: decimal">
+<li>From the “SNP Table”:
+<ul>
+<li>Select “Clear filter”</li>
+<li>select all SNPs, right click and “Update Selected SNP Statistics”</li>
+</ul></li>
+<li>From the “Samples Table”:
+<ul>
+<li>right click and “Recalculate Statistics for all Samples”</li>
+<li>select all samples, right click and select “Estimate Gender for selected samples”. When prompted “populate Gender column”, select “No”.</li>
+<li>Select the Column Chooser icon and show “Gender Est” from Hidden Columns.</li>
+</ul></li>
+</ol>
+</div>
+<div id="update-statistics" class="section level1">
+<h1>UPDATE STATISTICS</h1>
+<p>Following QC, statistics for samples and SNP’s need to be updated by:</p>
+<ol style="list-style-type: decimal">
+<li>In the “SNP Table”:
+<ul>
+<li>click “Select all”</li>
+<li>right click on the highlighted SNPs</li>
+<li>click “Update Selected SNP Statistics”</li>
+</ul></li>
+<li>In the “Samples Table”:</li>
+</ol>
+<ul>
+<li>click “Select all”</li>
+<li>right click on the highlighted samples</li>
+<li>click “Recalculate Statistics for all Samples”</li>
+</ul>
+</div>
+<div id="save-project" class="section level1">
+<h1>SAVE PROJECT</h1>
+<p>To save the current changes:</p>
+<ol style="list-style-type: decimal">
+<li>click on “File”:
+<ul>
+<li>“Save Project Copy As”:</li>
+<li>Navigate to the “06.GenomeStudio_project” folder</li>
+<li>save as: [PROJECT_NAME]_[DATE]_02.bsc</li>
+</ul></li>
+</ol>
+</div>
+<div id="create-input-for-coping" class="section level1">
+<h1>CREATE INPUT FOR COPING</h1>
+<p>COPING is a containerised workflow for processing Illumina genotyping data. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.The output data will be converted to PLINK format for the user to perform addtional analysis.</p>
+<p>To create the input file:</p>
+<ol style="list-style-type: decimal">
+<li>Remove all filters to display all remaining SNPs and Samples</li>
+<li>Select Full Data Table</li>
+<li>Select Column Chooser</li>
+<li>From the Displayed Columns window select:
+<ul>
+<li>Index</li>
+<li>Address</li>
+<li>Gen Train Score</li>
+<li>Frac A</li>
+<li>Frac C</li>
+<li>Frac G</li>
+<li>Frac T</li>
+</ul></li>
+<li>Click Hide</li>
+<li>From the Displayed Subcolumns Window select:
+<ul>
+<li>Score</li>
+<li>Theta</li>
+<li>R</li>
+</ul></li>
+<li>Click Hide</li>
+<li>From the Hidden Subcolumns Window select:
+<ul>
+<li>X</li>
+<li>Y</li>
+</ul></li>
+<li>Click Show</li>
+<li>Ensure the columns are in the order shown below:</li>
+</ol>
+<div class="figure">
+<img src="GenomeStudio_user_guide/GenomeStudio_output_example.png" alt="" />
+<p class="caption">Figure 18: Example format required for the COPING pipeline.</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Select all SNPs</li>
+<li>Select Export displayed data to file.</li>
+<li>Browse to the “07.GenomeStudio_final_reports” folder and save as [PROJECT_NAME]_[DATE]_intensity_data.report in tab delimited format</li>
+</ol>
+</div>
+<div id="cnv-still-under-development" class="section level1">
+<h1>CNV (STILL UNDER DEVELOPMENT)</h1>
+<div id="introduction-and-courses" class="section level2">
+<h2>Introduction and courses</h2>
+<p>Copy Number Variation (CNV) is when the number of copies of a particular gene varies from one individual to the next. CNV’s can be calculated within GenomeStudio or using external softwares.Here are some useful links for using GenomeStudio:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://support.illumina.com/content/dam/illumina-support/courses/CNV_Analysis/story_html5.html">Illumina CNV Basics course</a></li>
+<li><a href="https://support.illumina.com/content/dam/illumina-support/courses/GenomeStudio-cnvPartition/story_html5.html">GenomeStudio: Performing CNV Analysis using cnvPartition</a></li>
+<li><a href="https://www.youtube.com/embed/L_8eCfcT6_E?autoplay=1&amp;rel=0">Illumina Assay: CNV Analysis using GenomeStudio</a></li>
+<li><a href="https://www.illumina.com/documents/products/technotes/technote_cnv_algorithms.pdf">DNA Copy Number and Loss of Heterozygosity Analysis Algorithms</a></li>
+<li><a href="https://www.illumina.com/Documents/products/technotes/technote_cytoanalysis.pdf">Interpreting Infinium® Assay Data for Whole-Genome Structural Variation</a></li>
+<li><a href="https://clinicalgenome.org/tools/cnv-webinar/">CNV Technical Standards Web Series</a></li>
+</ol>
+<p><strong>NOTE: Illumina recommends using high-density chips such as the omni family. Low density chips are not recommended</strong></p>
+</div>
+<div id="genomestudio-basics" class="section level2">
+<h2>GenomeStudio Basics</h2>
+<ol style="list-style-type: decimal">
+<li>Loss of Heterozygosity (LOH):
+<ul>
+<li>A region that no longer as two different alleles</li>
+</ul></li>
+<li>Gain of Heterozygosity (GOH):
+<ul>
+<li>A region that gains an addtional allele</li>
+</ul></li>
+<li>B Allele Frequency (BAF):
+<ul>
+<li>How often a B allele is called</li>
+<li>Deviation from an average 0.5 can indicate CNV</li>
+</ul></li>
+<li>Log R Ratio (LRR):
+<ul>
+<li>normalised signal intensity. For each SNP, expected call regions are calculated based on previous data. Each call region has an expected R (equal to the sum of normalised red and green signal intensity and theta value for a given cluster). +LRR = log2(R obs/R exp)</li>
+</ul></li>
+<li>Log R Ratio calculations need to be taken into account to confirm CNV, especially in the case of LOH</li>
+</ol>
+<p><img src="GenomeStudio_user_guide/figure%2010%20B%20allele%20freq.png" alt="Figure 19: B allele Frequency Plots" /> <br> <img src="GenomeStudio_user_guide/figure%2011%20B%20allele%20freq%20and%20log%20r%20ratio.jpg" alt="Figure 20: B allele Frequency Plots with Log R Ratio" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Mosaicism is when a person has 2 or more genetically different sets of cells in their body. This can be identified through the B allele frequency plot + Log R Ratio:</li>
+</ol>
+<p><img src="GenomeStudio_user_guide/figure%2013%20b%20alle%20freq%20for%20mosaicism%20LOH.jpg" alt="Figure 21: Example of LOH" /> <br> <img src="GenomeStudio_user_guide/figure%2012%20b%20alle%20freq%20for%20mosaicism%20GOH.jpg" alt="Figure 22: Example of GOH" /></p>
+</div>
+<div id="genomestudio---cnvpartition" class="section level2">
+<h2>GenomeStudio - CNVpartition</h2>
+<p>To calculate CNV in GeneomStudio, the <a href="https://emea.support.illumina.com/downloads/genomestudio-2-0-plug-ins.html">cnvPartition</a> must be installed.</p>
+<ol style="list-style-type: decimal">
+<li>On the main window:
+<ul>
+<li>Click “CNV Analysis”</li>
+<li>Click on the dropdown menu and select “cnvPartition 3.2.0”</li>
+<li>click “calculate New CNV Analysis”. This ca take several minutes to hours depending on sample/SNP size and comput power</li>
+<li>This performs the calculations and provides a graphical output. The results can be introduced into the full table using the “add column” button and adding “CNV confidence” and “CNV value”.</li>
+</ul></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>CNV</th>
+<th>CNV Value</th>
+<th>CNV Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Normal</td>
+<td>2</td>
+<td>blank</td>
+</tr>
+<tr class="even">
+<td>Amplification</td>
+<td>3</td>
+<td>xx</td>
+</tr>
+<tr class="odd">
+<td>Deletion</td>
+<td>1</td>
+<td>xx</td>
+</tr>
+<tr class="even">
+<td>Copy neutral LOH</td>
+<td>2</td>
+<td>xx</td>
+</tr>
+</tbody>
+</table>
+<p>To view Individual chromosomes, in the main menu: + Click on “Tools” + Click on “Show Genome Viewer” + In the “Table-Sample-SubColumn” window, select the samples you want to view + In the “SubColumns”window, select “B allele Freq” and “Log R Ratio” + Click on “Add to favourite” + Click on “OK” + Click on the “update” tab + click on “View” and select “chromosome browser”</p>
+<p>To view more information, within the “Illumina Genome Viewer (IGV) - Micoarray -” window: + click “view” -&gt; “CNV Analysis as Bookmarks” + ClicK “OK” + you can hoover over shaded regions and it will provide you more information on the CNV</p>
+<p>To export into table format, within the “Illumina Genome Viewer (IGV) - Micoarray -” window: + click “view” -&gt; “Bookmark Viewer” + Export using the “export displayed data to file”</p>
+</div>
+<div id="genomestudio---cnv-region-report" class="section level2">
+<h2>GenomeStudio - CNV region report</h2>
+<p>This is based on the <a href="https://emea.support.illumina.com/downloads/genomestudio-2-0-plug-ins.html">CNV Region Report Plug-in v2.1.2</a> for GenomeStudio</p>
+<p>The Illumina GenomeStudio CNV Region Report Plug-in is a software plug-in that works with Illumina’s GenomeStudio Genotyping module. This plug-in lets you create three separate reports:</p>
+<ol style="list-style-type: decimal">
+<li>A Standard Report that lists each copy number variation (CNV) and loss of heterozygosity (LOH) region for each sample</li>
+<li>An Allele-Specific Copy Number Report that reports copy number informed genotypes such as A- and ABB</li>
+<li>A PLINK CNV Input Report, that creates input files for select CNV features of the PLINK GWAS and CNV analysis application</li>
+</ol>
+<p>To generate the standard report, in the main window: 1. Select “Analysis” -&gt; “Reports” -&gt; “Report Wizard”: + Select “Custom Report” + from the drop down menu, select “CNV Region Report” + under the “Report Input Paramter”, click on “CNV Analysis File” and select the .bin file generated in [CNVpartition]. + Continue to click “Next”, leaving all settings as default. + Select the output path where you want to generate the report and name the report. + Click “Finish”</p>
+</div>
+<div id="create-input-for-penncnv" class="section level2">
+<h2>Create input for PennCNV</h2>
+<p>This will create an input file for the <a href="http://penncnv.openbioinformatics.org/en/latest/">PennCNV</a> analysis tool</p>
+<ol style="list-style-type: decimal">
+<li>Select Full Data Table</li>
+<li>Select Column Chooser</li>
+<li>From the Displayed Subcolumns window select:
+<ul>
+<li>X</li>
+<li>Y</li>
+</ul></li>
+<li>Click Hide</li>
+<li>From the Hidden Subcolumns window select:
+<ul>
+<li>Log R Ratio</li>
+<li>B Allele Freq</li>
+</ul></li>
+<li>Click Show</li>
+<li>Ensure columns are in the order as shown below:</li>
+</ol>
+<p><img src="GenomeStudio_user_guide/Penncnv_input_example.png" alt="Figure 23: Example format required for PennCNV." /> 8. Select all SNPs 9. Select Export displayed data to file 10. Browse to the“07.GenomeStudio_final_reports” folder and save as [PROJECT_NAME]_[DATE]_PennCNV_input.txt in tab delimited format</p>
+<p><a href="https://www.openbioinformatics.org/penncnv/penncnv_examples.html">PennCNV: Quick start-up guide with examples</a></p>
+</div>
+<div id="ipsychcnv" class="section level2">
+<h2>iPsychCNV</h2>
+<p><a href="https://biopsyk.dk/ipsychcnv/">iPsychCNV</a> is an R package software capable of finding copy number variation in amplified DNA from dried blood spots on Illumina SNP array. It can handle large variation on Log R ratio, and use B allele frequency to improve CNV calls.</p>
+</div>
+<div id="cnvruler" class="section level2">
+<h2>CNVRuler</h2>
+<p>The method for genome-wide association study (GWAS) based on copy number variation (CNV) is not as well established as that for single nucleotide polymorphism (SNP)–GWAS. Although there are several tools for CNV association studies, most of them do not provide appropriate definitions of CNV regions (CNVRs), which are essential for CNV-association studies. Outputs from the 10 most common CNV defining algorithms can be directly used as input files for determining the three different definitions of CNVRs. Once CNVRs are defined, <a href="https://academic.oup.com/bioinformatics/article/28/13/1790/234696">CNVRuler</a> supports four kinds of statistical association tests and options for population stratification. CNVRuler is based on the open-source programs R and Java from Sun Microsystems.</p>
+</div>
+<div id="ensemblecnv" class="section level2">
+<h2>EnsembleCNV</h2>
+<p>The associations between diseases/traits and copy number variants (CNVs) have not been systematically investigated in genome-wide association studies (GWASs), primarily due to a lack of robust and accurate tools for CNV genotyping. <a href="https://academic.oup.com/nar/article/47/7/e39/5306576">ensembleCNV</a> can detect and genotype CNVs using single nucleotide polymorphism (SNP) array data. EnsembleCNV (a) identifies and eliminates batch effects at raw data level; (b) assembles individual CNV calls into CNV regions (CNVRs) from multiple existing callers with complementary strengths by a heuristic algorithm; (c) re-genotypes each CNVR with local likelihood model adjusted by global information across multiple CNVRs; (d) refines CNVR boundaries by local correlation structure in copy number intensities; (e) provides direct CNV genotyping accompanied with confidence score, directly accessible for downstream quality control and association analysis. Benchmarked on two large datasets, ensembleCNV outperformed competing methods and achieved a high call rate (93.3%) and reproducibility (98.6%), while concurrently achieving high sensitivity by capturing 85% of common CNVs documented in the 1000 Genomes Project. Given this CNV call rate and accuracy, which are comparable to SNP genotyping, we suggest ensembleCNV holds significant promise for performing genome-wide CNV association studies and investigating how CNVs predispose to human diseases.</p>
+</div>
+</div>
+<div id="reference" class="section level1">
+<h1>REFERENCE</h1>
+<p>If using this document in your research, then please reference the COPING paper:</p>
+</div>
+</div>
+
+   
+   
+            
+      
+
+  <script>
+    $(document).ready(function () {
+
+			
+ 		
+	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
+</html>
