@@ -10,3 +10,4 @@ navbar:
       href: COPING_user_guide.html
     - text: "COPING output"
       href: README_summary_report.html
+output_dir: "docs"
