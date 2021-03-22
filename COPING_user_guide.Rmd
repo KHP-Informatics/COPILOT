@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # libraries
 
-library(downloadthis)
+
 ```
 
 # INTRODUCTION
@@ -20,22 +20,25 @@ COPING is a **C**ontainerised w**O**rkflow for **P**rocessing **I**llumi**N**a *
 
 The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]
 
-1. [COPING docker image](https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/coping.tar)
-2. [example genomeStudio report_file](https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/example_genomestudio_file.txt)
-3. [example gender file](https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/example_gender_file.txt)
-4. [example Illumina manifest file](https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/HumanCoreExome-24v1-0_A.csv)
-5. [coping execution file](https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/COPING_execution.sh)
+```{r, include=FALSE}
 
-**If there any issues with the following links then please email me at hamel.patel@kcl.ac.uk**
+library(downloadthis)
 
+# COPING image
 download_link(
-  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/example_gender_file.txt",
-  button_label = "example gender file",
+  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/coping.tar",
+  button_label = "1.COPING docker image",
   button_type = "primary",
   has_icon = TRUE,
   icon = "fa fa-save",
   self_contained = FALSE
 )
+
+```
+
+
+**If there any issues with the following links then please email me at hamel.patel@kcl.ac.uk**
+
 
 # GENERATE USER SPECIFIC DATA
 
