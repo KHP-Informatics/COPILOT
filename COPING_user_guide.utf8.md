@@ -4,13 +4,7 @@ author: "Dr Hamel Patel hamel.patel@kcl.ac.uk"
 output: rmdformats::readthedown
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 
-# libraries
-
-library(downloadthis)
-```
 
 # INTRODUCTION
 
@@ -100,14 +94,16 @@ Docker can be installed onto the users operating system following [docker](https
 
 1. If not already done, download the [COPING docker image](). navigate to the folder where the docker image is stored and import the COPING.tar image into the docker repository:
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 docker load -i coping.tar
 
 ```
 
 2. confirm the docker image has loaded using:
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 
 docker images
 
@@ -116,7 +112,8 @@ docker images
 3. Give the newly imported image a name, replacing the docker IMAGE ID (c0ae9d5736fc) with what you have listed. Ensure the new name provided is "coping", as the execution script will be looking for this image.
 
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 
 docker tag c0ae9d5736fc coping
 
@@ -124,7 +121,8 @@ docker tag c0ae9d5736fc coping
 
 4. confirm the docker image has been successfully renamed:
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 
 docker images
 
@@ -148,7 +146,8 @@ A working example is provided below:
     
 The following is an explanation of the docker settings. These do not require changing and simply inform the user of how docker is run.
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 
 # run docker in detached mode
 docker run -d \
@@ -178,14 +177,16 @@ docker run -d \
 
 3. Save changes to the script and run the execution script:
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 ./COPING_execution.sh
 
 ```
 
 4. Error checking. Check the "QC_logfile.txt" file for any errors after the pipeline has finished.
 
-```{r, engine = 'bash', eval = FALSE}
+
+```bash
 grep "error" QC_logfile.txt
 
 ```
