@@ -19,7 +19,7 @@ COPING is a **C**ontainerised w**O**rkflow for **P**rocessing **I**llumi**N**a *
 
 # DOWNLOAD EXAMPLE DATA
 
-The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]
+The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]. **To download the files right click -> "save link as"**
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
