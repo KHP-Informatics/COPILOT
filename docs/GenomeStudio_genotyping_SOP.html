@@ -136,10 +136,10 @@
         <a href="GenomeStudio_genotyping_SOP.html">GenomeStudio QC</a>
       </li>
       <li>
-        <a href="COPING_user_guide.html">COPING user guide</a>
+        <a href="COPILOT_user_guide.html">COPILOT user guide</a>
       </li>
       <li>
-        <a href="README_summary_report.html">COPING output</a>
+        <a href="README_summary_report.html">COPILOT output</a>
       </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -178,7 +178,7 @@
       <li><a href="#gender-estimation">GENDER ESTIMATION</a></li>
       <li><a href="#update-statistics">UPDATE STATISTICS</a></li>
       <li><a href="#save-project">SAVE PROJECT</a></li>
-      <li><a href="#create-input-for-coping">CREATE INPUT FOR COPING</a></li>
+      <li><a href="#create-input-for-copilot">CREATE INPUT FOR COPILOT</a></li>
       <li><a href="#cnv-still-under-development">CNV (STILL UNDER DEVELOPMENT)</a>
       <ul>
       <li><a href="#introduction-and-courses">Introduction and courses</a></li>
@@ -206,7 +206,7 @@
 <div id="main">
 <div id="introduction" class="section level1">
 <h1>INTRODUCTION</h1>
-<p>Genotyping microarrays remain a popular tool to explore genetic variants such as single nucleotide polymorphism (SNP) and large structural changes in DNA. The Illumina genotyping arrays accomplish this by using pre-defined oligonucleotide probes designed to hybridise specific regions of genomic DNA, followed by extension using chemically labelled nucleotides. The probe extension binds either red or green fluorescent agents, which can be interpreted by the Illumina specific software GenomeStudio. This software determines the identity of alleles by automated clustering of samples based on the similarity of fluorescent intensity. However, the default clustering algorithm can fail to identity valid clusters and can also assign the wrong genotype to samples due to abnormal intensity patterns. This can be addressed by manually reviewing and recalling of SNPs to increase the reliability, confidence and overall quality of the data, making this an extremely crucial quality control (QC) procedure prior to further QC using PLINK or genetic interpretation. Through processing thousands of human patient samples from various tissue sources and on a variety of Illumina genotyping chips, we have accumulated extensive hands-on experience of transforming raw Illumina genotype intensity data to high-quality analysis-ready data. This includes processing both mainstream and custom content genotyping chips with over 4 million markers per sample. We have developed custom clustering files for each genotyping chip to address common problematic variants, allowing for quick and accurate assignment of genotypes to samples. This reduces the quantity of manual intervention required during the QC process, which effectively reduces the amount of human-introduced biases across batches. The following protocol is a description of the QC steps required to thoroughly process raw Illumina microarray-based genotyping data using the Illumina specific <a href="https://emea.illumina.com/techniques/microarrays/array-data-analysis-experimental-design/genomestudio.html">GenomeStudio</a> software. Following this protocol will convert raw image data to a reliably detected genotype calls (.report) file which can be further processed using our Containerised wOrkflow for Processing IllumiNa Genotyping microarray data <a href="https://github.com/hamelpatel/COPING">(COPING)</a>, to recall and improve the reliability and accuracy of rare variants that may have been missed by GenomeStudio, further improving the quality of the data. For any queries, collaboration request or fee-for-service, please contact the authors.</p>
+<p>Genotyping microarrays remain a popular tool to explore genetic variants such as single nucleotide polymorphism (SNP) and large structural changes in DNA. The Illumina genotyping arrays accomplish this by using pre-defined oligonucleotide probes designed to hybridise specific regions of genomic DNA, followed by extension using chemically labelled nucleotides. The probe extension binds either red or green fluorescent agents, which can be interpreted by the Illumina specific software GenomeStudio. This software determines the identity of alleles by automated clustering of samples based on the similarity of fluorescent intensity. However, the default clustering algorithm can fail to identity valid clusters and can also assign the wrong genotype to samples due to abnormal intensity patterns. This can be addressed by manually reviewing and recalling of SNPs to increase the reliability, confidence and overall quality of the data, making this an extremely crucial quality control (QC) procedure prior to further QC using PLINK or genetic interpretation. Through processing thousands of human patient samples from various tissue sources and on a variety of Illumina genotyping chips, we have accumulated extensive hands-on experience of transforming raw Illumina genotype intensity data to high-quality analysis-ready data. This includes processing both mainstream and custom content genotyping chips with over 4 million markers per sample. We have developed custom clustering files for each genotyping chip to address common problematic variants, allowing for quick and accurate assignment of genotypes to samples. This reduces the quantity of manual intervention required during the QC process, which effectively reduces the amount of human-introduced biases across batches. The following protocol is a description of the QC steps required to thoroughly process raw Illumina microarray-based genotyping data using the Illumina specific <a href="https://emea.illumina.com/techniques/microarrays/array-data-analysis-experimental-design/genomestudio.html">GenomeStudio</a> software. Following this protocol will convert raw image data to a reliably detected genotype calls (.report) file which can be further processed using our Containerised wOrkflow for Processing IllumiNa Genotyping microarray data <a href="https://github.com/hamelpatel/COPILOT">(COPILOT)</a>, to recall and improve the reliability and accuracy of rare variants that may have been missed by GenomeStudio, further improving the quality of the data. For any queries, collaboration request or fee-for-service, please contact the authors.</p>
 <p><strong>Note</strong></p>
 <ul>
 <li>The GenomeStudio software requires a minimum of 100 samples to cluster the data accurately. However, to thoroughly process the sex chromosomes its recommended to have at least 100 male and 100 female samples. Projects with less than a 100 samples are recommended to use pre-defined cluster files to cluster the data.</li>
@@ -234,7 +234,7 @@
 <li>05.GenomeStudio_manifest_and_egt</li>
 <li>06.GenomeStudio_project</li>
 <li>07.GenomeStudio_final_reports</li>
-<li>08.COPING_pipeline_output</li>
+<li>08.COPILOT_pipeline_output</li>
 <li>09.CNV</li>
 <li>10.Notes</li>
 <li>README.txt</li>
@@ -772,9 +772,9 @@ Figure 12: Female samples represented by the yellow dots should not have Y chrom
 </ul></li>
 </ol>
 </div>
-<div id="create-input-for-coping" class="section level1">
-<h1>CREATE INPUT FOR COPING</h1>
-<p>COPING is a containerised workflow for processing Illumina genotyping data. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.The output data will be converted to PLINK format for the user to perform addtional analysis.</p>
+<div id="create-input-for-copilot" class="section level1">
+<h1>CREATE INPUT FOR COPILOT</h1>
+<p>COPILOT is a containerised workflow for processing Illumina genotyping data. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.The output data will be converted to PLINK format for the user to perform addtional analysis.</p>
 <p>To create the input file:</p>
 <ol style="list-style-type: decimal">
 <li>Remove all filters to display all remaining SNPs and Samples</li>
@@ -808,7 +808,7 @@ Figure 12: Female samples represented by the yellow dots should not have Y chrom
 </ol>
 <div class="figure">
 <img src="GenomeStudio_user_guide/GenomeStudio_output_example.png" alt="" />
-<p class="caption">Figure 18: Example format required for the COPING pipeline.</p>
+<p class="caption">Figure 18: Example format required for the COPILOT pipeline.</p>
 </div>
 <ol start="11" style="list-style-type: decimal">
 <li>Select all SNPs</li>
@@ -955,7 +955,7 @@ Figure 12: Female samples represented by the yellow dots should not have Y chrom
 </div>
 <div id="reference" class="section level1">
 <h1>REFERENCE</h1>
-<p>If using this document in your research, then please reference the COPING paper:</p>
+<p>If using this document in your research, then please reference the COPILOT paper:</p>
 </div>
 </div>
 

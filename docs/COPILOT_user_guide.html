@@ -8,7 +8,7 @@
         <meta name="author" content="Dr Hamel Patel hamel.patel@kcl.ac.uk" />
     
     
-    <title>COPING user guide</title>
+    <title>COPILOT user guide</title>
 
         <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
         <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -219,11 +219,11 @@
         </div><!--/.container -->
       </div><!--/.navbar -->
         
-      <h1 class="title">COPING user guide</h1>
+      <h1 class="title">COPILOT user guide</h1>
       
          <!-- readthedown authors -->
    <div id="sidebar">
-    <h2><a href="#content">COPING user guide</a></h2>
+    <h2><a href="#content">COPILOT user guide</a></h2>
     <div id="toc">
       <ul>
       <li><a href="#introduction">INTRODUCTION</a></li>
@@ -239,8 +239,8 @@
       <li><a href="#install-docker">Install Docker</a></li>
       <li><a href="#import-docker-image">Import Docker image</a></li>
       </ul></li>
-      <li><a href="#run-coping-pipeline">RUN COPING PIPELINE</a></li>
-      <li><a href="#coping-output">COPING OUTPUT</a></li>
+      <li><a href="#run-copilot-pipeline">RUN COPILOT PIPELINE</a></li>
+      <li><a href="#copilot-output">COPILOT OUTPUT</a></li>
       </ul>
     </div>
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
@@ -256,36 +256,36 @@
 <div id="main">
 <div id="introduction" class="section level1">
 <h1>INTRODUCTION</h1>
-<p>COPING is a <strong>C</strong>ontainerised w<strong>O</strong>rkflow for <strong>P</strong>rocessing <strong>I</strong>llumi<strong>N</strong>a <strong>G</strong>enotyping data. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.</p>
+<p>COPILOT is a <strong>C</strong>ontainerised w<strong>O</strong>rkflow for <strong>P</strong>rocessing <strong>IL</strong>lumina gen<strong>O</strong>typing da<strong>T</strong>a. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.</p>
 </div>
 <div id="download-example-data" class="section level1">
 <h1>DOWNLOAD EXAMPLE DATA</h1>
 <p>The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in <a href="#generate-user-specific-data">GENERATE USER SPECIFIC DATA</a>. <strong>To download the files right click -&gt; “save link as”</strong></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/coping.tar">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 1.COPING docker image</button>
+<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/COPILOT.tar">
+<button class="btn btn-primary"><i class="fa fa-save"></i> 1.COPILOT docker image</button>
 </a>
 <p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/example_genomestudio_file.txt">
+<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/example_genomestudio_file.txt">
 <button class="btn btn-primary"><i class="fa fa-save"></i> 2.Example GenomeStudio report file</button>
 </a>
 <p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/example_gender_file.txt">
+<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/example_gender_file.txt">
 <button class="btn btn-primary"><i class="fa fa-save"></i> 3.Example gender file</button>
 </a>
 <p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/HumanCoreExome-24v1-0_A.csv">
+<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/HumanCoreExome-24v1-0_A.csv">
 <button class="btn btn-primary"><i class="fa fa-save"></i> 4.Example Illumina manifest file</button>
 </a>
 <p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPING/COPING_execution.sh">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 5.COPING execution file</button>
+<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/COPILOT_execution.sh">
+<button class="btn btn-primary"><i class="fa fa-save"></i> 5.COPILOT execution file</button>
 </a>
 <p><br /></p>
 <p><strong>If there any issues with the following links then please email me at <a href="mailto:hamel.patel@kcl.ac.uk" class="email">hamel.patel@kcl.ac.uk</a></strong></p>
 </div>
 <div id="generate-user-specific-data" class="section level1">
 <h1>GENERATE USER SPECIFIC DATA</h1>
-<p>COPING requires 3 files that the user must generate if they wish to run COPING on their data.</p>
+<p>COPILOT requires 3 files that the user must generate if they wish to run COPILOT on their data.</p>
 <div id="genomestudio-report-file" class="section level2">
 <h2>GenomeStudio report file</h2>
 <p>The GenomeStudio report file is generated in GenomeStudio after QC. This can be generated by the following steps:</p>
@@ -320,8 +320,8 @@
 <li>Ensure the columns are in the order shown below:</li>
 </ol>
 <div class="figure">
-<img src="COPING_user_guide/GenomeStudio_output_example.png" alt="" />
-<p class="caption">Figure 1: Example format required for the COPING pipeline.</p>
+<img src="COPILOT_user_guide/GenomeStudio_output_example.png" alt="" />
+<p class="caption">Figure 1: Example format required for the COPILOT pipeline.</p>
 </div>
 <ol start="11" style="list-style-type: decimal">
 <li>Select all SNPs</li>
@@ -341,7 +341,7 @@
 </div>
 <div id="installation" class="section level1">
 <h1>INSTALLATION</h1>
-<p>The following tutorial is an example of installing COPING on a windows or linux machine using the ubuntu terminal. For windows machines, WSL needs to installed, followed by Ubuntu.</p>
+<p>The following tutorial is an example of installing COPILOT on a windows or linux machine using the ubuntu terminal. For windows machines, WSL needs to installed, followed by Ubuntu.</p>
 <div id="install-docker" class="section level2">
 <h2>Install Docker</h2>
 <p>Docker can be installed onto the users operating system following <a href="https://docs.docker.com/get-docker/">docker</a> guide.</p>
@@ -349,19 +349,19 @@
 <div id="import-docker-image" class="section level2">
 <h2>Import Docker image</h2>
 <ol style="list-style-type: decimal">
-<li>If not already done, download the <a href="">COPING docker image</a>. navigate to the folder where the docker image is stored and import the COPING.tar image into the docker repository:</li>
+<li>If not already done, download the <a href="">COPILOT docker image</a>. navigate to the folder where the docker image is stored and import the COPILOT.tar image into the docker repository:</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> load <span class="at">-i</span> coping.tar</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> load <span class="at">-i</span> COPILOT.tar</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>confirm the docker image has loaded using:</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> images</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Give the newly imported image a name, replacing the docker IMAGE ID (c0ae9d5736fc) with what you have listed. Ensure the new name provided is “coping”, as the execution script will be looking for this image.</li>
+<li>Give the newly imported image a name, replacing the docker IMAGE ID (c0ae9d5736fc) with what you have listed. Ensure the new name provided is “COPILOT”, as the execution script will be looking for this image.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> tag c0ae9d5736fc coping</span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> tag c0ae9d5736fc COPILOT</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>confirm the docker image has been successfully renamed:</li>
 </ol>
@@ -369,15 +369,15 @@
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> images</span></code></pre></div>
 <p>A working example is provided below:</p>
 <div class="figure">
-<img src="COPING_user_guide/installing%20COPING.png" alt="" />
-<p class="caption">Figure 2: Command line installation of the docker COPING image</p>
+<img src="COPILOT_user_guide/installing%20COPILOT.png" alt="" />
+<p class="caption">Figure 2: Command line installation of the docker COPILOT image</p>
 </div>
 </div>
 </div>
-<div id="run-coping-pipeline" class="section level1">
-<h1>RUN COPING PIPELINE</h1>
+<div id="run-copilot-pipeline" class="section level1">
+<h1>RUN COPILOT PIPELINE</h1>
 <ol style="list-style-type: decimal">
-<li><p>Place the GenomeStudio report file, gender file, Illumina manifest file and COPING execution script into the same directory. For this tutorial, an “example” folder is created and all files are moved there.</p></li>
+<li><p>Place the GenomeStudio report file, gender file, Illumina manifest file and COPILOT execution script into the same directory. For this tutorial, an “example” folder is created and all files are moved there.</p></li>
 <li><p>Edit the “execution file” and specify:</p>
 <ul>
 <li><strong>data_location:</strong> This is the location of where the data is stored and where the output will be generated. For our example this will be the folder created in step 3 above (“example”). Ensure you specifiy the full path of the folder.</li>
@@ -393,7 +393,7 @@
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="dt">\</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      <span class="co"># provide a name for the conatiner</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">--name</span> <span class="st">&quot;COPING&quot;</span> <span class="dt">\</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">--name</span> <span class="st">&quot;COPILOT&quot;</span> <span class="dt">\</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="co"># mount data location from the users machine to the docker internal image</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-v</span> <span class="va">${data_location}</span>:/Genotype_QC_pipeline/4.data <span class="dt">\</span></span>
@@ -404,8 +404,8 @@
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      <span class="co"># at the start of docker, execute this script. </span></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      <span class="ex">--entrypoint=/Genotype_QC_pipeline/3.master_script/run_zCall_QC_pipeline.sh</span> <span class="dt">\</span></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                                </span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>      <span class="co"># name of docker image to run. This may require changing if the user labels the image differently to coping:latest</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>      <span class="ex">coping:latest</span> <span class="dt">\</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>      <span class="co"># name of docker image to run. This may require changing if the user labels the image differently to COPILOT:latest</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>      <span class="ex">COPILOT:latest</span> <span class="dt">\</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                                        </span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>      <span class="co"># inputs required for the &quot;Genotype_QC_pipeline/3.master_script/run_zCall_QC_pipeline.sh&quot; script within docker</span></span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>      <span class="ex">/Genotype_QC_pipeline/4.data/</span><span class="va">${manifest_file}</span> <span class="dt">\</span></span>
@@ -415,15 +415,15 @@
 <ol start="3" style="list-style-type: decimal">
 <li>Save changes to the script and run the execution script:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./COPING_execution.sh</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./COPILOT_execution.sh</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Error checking. Check the “QC_logfile.txt” file for any errors after the pipeline has finished.</li>
 </ol>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;error&quot;</span> QC_logfile.txt</span></code></pre></div>
 <p>The example data takes 54 minutes to run on a machine with 6 dual cores and 32GB ram.</p>
 </div>
-<div id="coping-output" class="section level1">
-<h1>COPING OUTPUT</h1>
+<div id="copilot-output" class="section level1">
+<h1>COPILOT OUTPUT</h1>
 <p>An explantion of the output files will be explained in the summary report. The data will be arranged in the following folders:</p>
 <ul>
 <li><strong>0.Scripts_and_logfiles</strong>: Contains the master script and associated logfiles</li>

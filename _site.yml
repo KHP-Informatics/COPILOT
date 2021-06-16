@@ -6,8 +6,8 @@ navbar:
       href: index.html
     - text: "GenomeStudio QC"
       href: GenomeStudio_genotyping_SOP.html
-    - text: "COPING user guide"
-      href: COPING_user_guide.html
-    - text: "COPING output"
+    - text: "COPILOT user guide"
+      href: COPILOT_user_guide.html
+    - text: "COPILOT output"
       href: README_summary_report.html
 output_dir: "docs"

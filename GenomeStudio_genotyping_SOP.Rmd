@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # INTRODUCTION
 
-Genotyping microarrays remain a popular tool to explore genetic variants such as single nucleotide polymorphism (SNP) and large structural changes in DNA. The Illumina genotyping arrays accomplish this by using pre-defined oligonucleotide probes designed to hybridise specific regions of genomic DNA, followed by extension using chemically labelled nucleotides. The probe extension binds either red or green fluorescent agents, which can be interpreted by the Illumina specific software GenomeStudio. This software determines the identity of alleles by automated clustering of samples based on the similarity of fluorescent intensity. However, the default clustering algorithm can fail to identity valid clusters and can also assign the wrong genotype to samples due to abnormal intensity patterns. This can be addressed by manually reviewing and recalling of SNPs to increase the reliability, confidence and overall quality of the data, making this an extremely crucial quality control (QC) procedure prior to further QC using PLINK or genetic interpretation. Through processing thousands of human patient samples from various tissue sources and on a variety of Illumina genotyping chips, we have accumulated extensive hands-on experience of transforming raw Illumina genotype intensity data to high-quality analysis-ready data. This includes processing both mainstream and custom content genotyping chips with over 4 million markers per sample. We have developed custom clustering files for each genotyping chip to address common problematic variants, allowing for quick and accurate assignment of genotypes to samples. This reduces the quantity of manual intervention required during the QC process, which effectively reduces the amount of human-introduced biases across batches. The following protocol is a description of the QC steps required to thoroughly process raw Illumina microarray-based genotyping data using the Illumina specific [GenomeStudio](https://emea.illumina.com/techniques/microarrays/array-data-analysis-experimental-design/genomestudio.html) software. Following this protocol will convert raw image data to a reliably detected genotype calls (.report) file which can be further processed using our Containerised wOrkflow for Processing IllumiNa Genotyping microarray data [(COPING)](https://github.com/hamelpatel/COPING), to recall and improve the reliability and accuracy of rare variants that may have been missed by GenomeStudio, further improving the quality of the data. For any queries, collaboration request or fee-for-service, please contact the authors.
+Genotyping microarrays remain a popular tool to explore genetic variants such as single nucleotide polymorphism (SNP) and large structural changes in DNA. The Illumina genotyping arrays accomplish this by using pre-defined oligonucleotide probes designed to hybridise specific regions of genomic DNA, followed by extension using chemically labelled nucleotides. The probe extension binds either red or green fluorescent agents, which can be interpreted by the Illumina specific software GenomeStudio. This software determines the identity of alleles by automated clustering of samples based on the similarity of fluorescent intensity. However, the default clustering algorithm can fail to identity valid clusters and can also assign the wrong genotype to samples due to abnormal intensity patterns. This can be addressed by manually reviewing and recalling of SNPs to increase the reliability, confidence and overall quality of the data, making this an extremely crucial quality control (QC) procedure prior to further QC using PLINK or genetic interpretation. Through processing thousands of human patient samples from various tissue sources and on a variety of Illumina genotyping chips, we have accumulated extensive hands-on experience of transforming raw Illumina genotype intensity data to high-quality analysis-ready data. This includes processing both mainstream and custom content genotyping chips with over 4 million markers per sample. We have developed custom clustering files for each genotyping chip to address common problematic variants, allowing for quick and accurate assignment of genotypes to samples. This reduces the quantity of manual intervention required during the QC process, which effectively reduces the amount of human-introduced biases across batches. The following protocol is a description of the QC steps required to thoroughly process raw Illumina microarray-based genotyping data using the Illumina specific [GenomeStudio](https://emea.illumina.com/techniques/microarrays/array-data-analysis-experimental-design/genomestudio.html) software. Following this protocol will convert raw image data to a reliably detected genotype calls (.report) file which can be further processed using our Containerised wOrkflow for Processing IllumiNa Genotyping microarray data [(COPILOT)](https://github.com/hamelpatel/COPILOT), to recall and improve the reliability and accuracy of rare variants that may have been missed by GenomeStudio, further improving the quality of the data. For any queries, collaboration request or fee-for-service, please contact the authors.
 
 **Note**
 
@@ -38,7 +38,7 @@ The following is an optional data directory format which is useful in organising
     + 05.GenomeStudio_manifest_and_egt
     + 06.GenomeStudio_project
     + 07.GenomeStudio_final_reports
-    + 08.COPING_pipeline_output
+    + 08.COPILOT_pipeline_output
     + 09.CNV
     + 10.Notes
     + README.txt
@@ -455,9 +455,9 @@ To save the current changes:
     + save as: [PROJECT_NAME]_[DATE]_02.bsc
 
 
-# CREATE INPUT FOR COPING
+# CREATE INPUT FOR COPILOT
 
-COPING is a containerised workflow for processing Illumina genotyping data. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.The output data will be converted to PLINK format for the user to perform addtional analysis.
+COPILOT is a containerised workflow for processing Illumina genotyping data. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.The output data will be converted to PLINK format for the user to perform addtional analysis.
 
 
 To create the input file:
@@ -485,7 +485,7 @@ To create the input file:
 9. Click Show
 10. Ensure the columns are in the order shown below:
 
-![Figure 18: Example format required for the COPING pipeline.](GenomeStudio_user_guide/GenomeStudio_output_example.png) 
+![Figure 18: Example format required for the COPILOT pipeline.](GenomeStudio_user_guide/GenomeStudio_output_example.png) 
 
 11. Select all SNPs
 12. Select Export displayed data to file.
@@ -629,7 +629,7 @@ The associations between diseases/traits and copy number variants (CNVs) have no
 
 # REFERENCE
 
-If using this document in your research, then please reference the COPING paper:
+If using this document in your research, then please reference the COPILOT paper:
 
 
 
