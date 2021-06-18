@@ -1,2 +1,2 @@
-# COPING
-a Containerised wOrkflow for Processing IllumiNa Genotyping microarray data 
+# COPILOT
+a Containerised wOrkflow for Processing ILlumina genOtyping daTa 
