@@ -25,7 +25,7 @@ The following download links provides the files required for the following tutor
 
 # COPILOT image
 download_link(
-  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/COPILOT.tar",
+  link = "https://brcilluminadata.s3.eu-west-1.amazonaws.com/COPILOT/copilot.tar",
   button_label = "1.COPILOT docker image",
   button_type = "primary",
   has_icon = TRUE,
