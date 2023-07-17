@@ -1,241 +1,173 @@
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="generator" content="pandoc" />
 
-        <meta name="author" content="Dr Hamel Patel hamel.patel@kcl.ac.uk" />
-    
-    
-    <title>COPILOT user guide</title>
+<head>
 
-        <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-        <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-        <script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-        <script src="site_libs/navigation-1.1/tabsets.js"></script>
-        <link href="site_libs/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
-        <script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
-        <link href="site_libs/readthedown-0.1/readthedown.css" rel="stylesheet" />
-        <link href="site_libs/readthedown-0.1/readthedown_fonts_embed.css" rel="stylesheet" />
-        <script src="site_libs/readthedown-0.1/readthedown.js"></script>
-        <script src="site_libs/font-awesome-5.13.0/js/script.js"></script>
-    
-    
-        <style type="text/css">code{white-space: pre;}</style>
-    <style type="text/css">
-      pre > code.sourceCode { white-space: pre; position: relative; }
-      pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-      pre > code.sourceCode > span:empty { height: 1.2em; }
-      .sourceCode { overflow: visible; }
-      code.sourceCode > span { color: inherit; text-decoration: inherit; }
-      div.sourceCode { margin: 1em 0; }
-      pre.sourceCode { margin: 0; }
-      @media screen {
-      div.sourceCode { overflow: auto; }
-      }
-      @media print {
-      pre > code.sourceCode { white-space: pre-wrap; }
-      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-      }
-      pre.numberSource code
-        { counter-reset: source-line 0; }
-      pre.numberSource code > span
-        { position: relative; left: -4em; counter-increment: source-line; }
-      pre.numberSource code > span > a:first-child::before
-        { content: counter(source-line);
-          position: relative; left: -1em; text-align: right; vertical-align: baseline;
-          border: none; display: inline-block;
-          -webkit-touch-callout: none; -webkit-user-select: none;
-          -khtml-user-select: none; -moz-user-select: none;
-          -ms-user-select: none; user-select: none;
-          padding: 0 4px; width: 4em;
-          background-color: #ffffff;
-          color: #a0a0a0;
-        }
-      pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
-      div.sourceCode
-        { color: #1f1c1b; background-color: #ffffff; }
-      @media screen {
-      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-      }
-      code span { color: #1f1c1b; } /* Normal */
-      code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
-      code span.an { color: #ca60ca; } /* Annotation */
-      code span.at { color: #0057ae; } /* Attribute */
-      code span.bn { color: #b08000; } /* BaseN */
-      code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
-      code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
-      code span.ch { color: #924c9d; } /* Char */
-      code span.cn { color: #aa5500; } /* Constant */
-      code span.co { color: #898887; } /* Comment */
-      code span.cv { color: #0095ff; } /* CommentVar */
-      code span.do { color: #607880; } /* Documentation */
-      code span.dt { color: #0057ae; } /* DataType */
-      code span.dv { color: #b08000; } /* DecVal */
-      code span.er { color: #bf0303; text-decoration: underline; } /* Error */
-      code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
-      code span.fl { color: #b08000; } /* Float */
-      code span.fu { color: #644a9b; } /* Function */
-      code span.im { color: #ff5500; } /* Import */
-      code span.in { color: #b08000; } /* Information */
-      code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
-      code span.op { color: #1f1c1b; } /* Operator */
-      code span.ot { color: #006e28; } /* Other */
-      code span.pp { color: #006e28; } /* Preprocessor */
-      code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
-      code span.sc { color: #3daee9; } /* SpecialChar */
-      code span.ss { color: #ff5500; } /* SpecialString */
-      code span.st { color: #bf0303; } /* String */
-      code span.va { color: #0057ae; } /* Variable */
-      code span.vs { color: #bf0303; } /* VerbatimString */
-      code span.wa { color: #bf0303; } /* Warning */
-    </style>
-    
-    
-    <!-- tabsets -->
-    <script>
-      $(document).ready(function () {
-	  window.buildTabsets("toc");
-      });
-      $(document).ready(function () {
-	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-	      $(this).parent().toggleClass('nav-tabs-open')
-	  });
-      });
-    </script>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
 
-    <!-- code folding -->
-    
-    <!-- code download -->
-    
-    <!-- tabsets dropdown -->
+<meta name="author" content="Dr Hamel Patel hamel.patel@kcl.ac.uk" />
 
-    <style type="text/css">
-      .tabset-dropdown > .nav-tabs {
-	  display: inline-table;
-	  max-height: 500px;
-	  min-height: 44px;
-	  overflow-y: auto;
-	  background: white;
-	  border: 1px solid #ddd;
-	  border-radius: 4px;
-      }
-      
-      .tabset-dropdown > .nav-tabs > li.active:before {
-	  content: "";
-	  font-family: 'Glyphicons Halflings';
-	  display: inline-block;
-	  padding: 10px;
-	  border-right: 1px solid #ddd;
-      }
-      
-      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-	  content: "&#xe258;";
-	  border: none;
-      }
-      
-      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-	  content: "";
-	  font-family: 'Glyphicons Halflings';
-	  display: inline-block;
-	  padding: 10px;
-	  border-right: 1px solid #ddd;
-      }
-      
-      .tabset-dropdown > .nav-tabs > li.active {
-	  display: block;
-      }
 
-      .tabset-dropdown > .nav-tabs > li.active a {
-  	  padding: 0 15px !important;
-      }
+<title>COPILOT user guide</title>
 
-      .tabset-dropdown > .nav-tabs > li > a,
-      .tabset-dropdown > .nav-tabs > li > a:focus,
-      .tabset-dropdown > .nav-tabs > li > a:hover {
-	  border: none;
-	  display: inline-block;
-	  border-radius: 4px;
-	  background-color: transparent;
-      }
-      
-      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-	  display: block;
-	  float: none;
-      }
-      
-      .tabset-dropdown > .nav-tabs > li {
-	  display: none;
-	  margin-left: 0 !important;
-      }
-    </style>
-    
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+<script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+<link href="site_libs/readthedown-0.1/readthedown.css" rel="stylesheet" />
+<script src="site_libs/readthedown-0.1/readthedown.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+
+
 </head>
 
-<body class="preload">
+<body>
 
-   	
-         <!-- readthedown start -->   
-   <div id="content" data-toggle="wy-nav-shift">
-     <nav id="nav-top" role="navigation" aria-label="top navigation">
-       <a role="button" href="#" data-toggle="wy-nav-top"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
-     </nav>
-         
-   
-      
-      <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"></a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="GenomeStudio_genotyping_SOP.html">GenomeStudio QC</a>
-      </li>
-      <li>
-        <a href="COPILOT_user_guide.html">COPILOT user guide</a>
-      </li>
-      <li>
-        <a href="README_summary_report.html">COPILOT output</a>
-      </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container -->
-      </div><!--/.navbar -->
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="GenomeStudio_genotyping_SOP.html">GenomeStudio QC</a>
+</li>
+<li>
+  <a href="COPILOT_user_guide.html">COPILOT user guide</a>
+</li>
+<li>
+  <a href="README_summary_report.html">COPILOT output</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         
-      <h1 class="title">COPILOT user guide</h1>
-      
-         <!-- readthedown authors -->
-   <div id="sidebar">
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="content" data-toggle="wy-nav-shift">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("text-table-of-contents");
+});
+</script>
+
+<!-- code folding -->
+
+<nav id="nav-top" role="navigation" aria-label="top navigation">
+    <a role="button" href="#" data-toggle="wy-nav-top"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+</nav>
+
+
+<div id="header">
+<h1 class="title">COPILOT user guide</h1>
+</div>
+
+
+<div id="sidebar">
     <h2><a href="#content">COPILOT user guide</a></h2>
-    <div id="toc">
+    <div id="table-of-contents">
       <ul>
       <li><a href="#introduction">INTRODUCTION</a></li>
-      <li><a href="#download-example-data">DOWNLOAD EXAMPLE DATA</a></li>
-      <li><a href="#generate-user-specific-data">GENERATE USER SPECIFIC DATA</a>
-      <ul>
+      <li><a href="#download">DOWNLOAD</a></li>
+      <li><a href="#generate-user-specific-data">GENERATE USER SPECIFIC DATA</a><ul>
       <li><a href="#genomestudio-report-file">GenomeStudio report file</a></li>
       <li><a href="#gender-file">Gender file</a></li>
       <li><a href="#illumina-manifest-file">Illumina manifest file</a></li>
       </ul></li>
-      <li><a href="#installation">INSTALLATION</a>
-      <ul>
+      <li><a href="#installation">INSTALLATION</a><ul>
       <li><a href="#install-docker">Install Docker</a></li>
       <li><a href="#import-docker-image">Import Docker image</a></li>
       </ul></li>
@@ -243,44 +175,20 @@
       <li><a href="#copilot-output">COPILOT OUTPUT</a></li>
       </ul>
     </div>
+    
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
-                  <p class="author"><span class="glyphicon glyphicon-user"></span> Dr Hamel Patel <a href="mailto:hamel.patel@kcl.ac.uk" class="email">hamel.patel@kcl.ac.uk</a></p>
-                      </div>
-   </div>
-     
+              <p class="author"><span class="glyphicon glyphicon-user"></span> Dr Hamel Patel <a href="mailto:hamel.patel@kcl.ac.uk" class="email">hamel.patel@kcl.ac.uk</a></p>
+                </div>
+</div>
 
-   
-      
-   
-<!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div id="main">
 <div id="introduction" class="section level1">
 <h1>INTRODUCTION</h1>
 <p>COPILOT is a <strong>C</strong>ontainerised w<strong>O</strong>rkflow for <strong>P</strong>rocessing <strong>IL</strong>lumina gen<strong>O</strong>typing da<strong>T</strong>a. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report.</p>
 </div>
-<div id="download-example-data" class="section level1">
-<h1>DOWNLOAD EXAMPLE DATA</h1>
-<p>The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in <a href="#generate-user-specific-data">GENERATE USER SPECIFIC DATA</a>. <strong>To download the files right click -&gt; “save link as”</strong></p>
-<a href="https://brcilluminadata.s3.eu-west-1.amazonaws.com/COPILOT/copilot.tar">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 1.COPILOT docker image</button>
-</a>
-<p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/example_genomestudio_file.txt">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 2.Example GenomeStudio report file</button>
-</a>
-<p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/example_gender_file.txt">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 3.Example gender file</button>
-</a>
-<p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/HumanCoreExome-24v1-0_A.csv">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 4.Example Illumina manifest file</button>
-</a>
-<p><br /></p>
-<a href="https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/COPILOT_execution.sh">
-<button class="btn btn-primary"><i class="fa fa-save"></i> 5.COPILOT execution file</button>
-</a>
-<p><br /></p>
+<div id="download" class="section level1">
+<h1>DOWNLOAD</h1>
+<p>The pipeline and example files can be downloaded <a href="https://doi.org/10.18742/22680079">here</a>.</p>
 <p><strong>If there any issues with the following links then please email me at <a href="mailto:hamel.patel@kcl.ac.uk" class="email">hamel.patel@kcl.ac.uk</a></strong></p>
 </div>
 <div id="generate-user-specific-data" class="section level1">
@@ -351,22 +259,22 @@
 <ol style="list-style-type: decimal">
 <li>If not already done, download the <a href="">COPILOT docker image</a>. navigate to the folder where the docker image is stored and import the COPILOT.tar image into the docker repository:</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> load <span class="at">-i</span> COPILOT.tar</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">docker</span> load -i COPILOT.tar</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>confirm the docker image has loaded using:</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> images</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">docker</span> images</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Give the newly imported image a name, replacing the docker IMAGE ID (c0ae9d5736fc) with what you have listed. Ensure the new name provided is “COPILOT”, as the execution script will be looking for this image.</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> tag c0ae9d5736fc COPILOT</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">docker</span> tag c0ae9d5736fc COPILOT</span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>confirm the docker image has been successfully renamed:</li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> images</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="ex">docker</span> images</span></code></pre></div>
 <p>A working example is provided below:</p>
 <div class="figure">
 <img src="COPILOT_user_guide/installing%20COPILOT.png" alt="" />
@@ -388,38 +296,38 @@
 </ul></li>
 </ol>
 <p>The following is an explanation of the docker settings. These do not require changing and simply inform the user of how docker is run.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># run docker in detached mode</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="dt">\</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      <span class="co"># provide a name for the conatiner</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">--name</span> <span class="st">&quot;COPILOT&quot;</span> <span class="dt">\</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="co"># mount data location from the users machine to the docker internal image</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-v</span> <span class="va">${data_location}</span>:/Genotype_QC_pipeline/4.data <span class="dt">\</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                </span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="co"># mount output location from the docker image</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-v</span> <span class="va">${data_location}</span>/pipeline_output:/Genotype_QC_pipeline/5.pipeline_output <span class="dt">\</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      <span class="co"># at the start of docker, execute this script. </span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      <span class="ex">--entrypoint=/Genotype_QC_pipeline/3.master_script/run_zCall_QC_pipeline.sh</span> <span class="dt">\</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                                </span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>      <span class="co"># name of docker image to run. This may require changing if the user labels the image differently to COPILOT:latest</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>      <span class="ex">COPILOT:latest</span> <span class="dt">\</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>                                        </span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>      <span class="co"># inputs required for the &quot;Genotype_QC_pipeline/3.master_script/run_zCall_QC_pipeline.sh&quot; script within docker</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>      <span class="ex">/Genotype_QC_pipeline/4.data/</span><span class="va">${manifest_file}</span> <span class="dt">\</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>      /Genotype_QC_pipeline/4.data/<span class="va">${clinical_gender}</span> <span class="dt">\</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>      /Genotype_QC_pipeline/4.data/<span class="va">${report_file}</span> <span class="dt">\</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>      <span class="va">${sample_call_rate}</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co"># run docker in detached mode</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="ex">docker</span> run -d \</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>      <span class="co"># provide a name for the conatiner</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>      <span class="ex">--name</span> <span class="st">&quot;COPILOT&quot;</span> \</span>
+<span id="cb5-7"><a href="#cb5-7"></a>        </span>
+<span id="cb5-8"><a href="#cb5-8"></a>      <span class="co"># mount data location from the users machine to the docker internal image</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>      <span class="ex">-v</span> <span class="va">${data_location}</span>:/Genotype_QC_pipeline/4.data \</span>
+<span id="cb5-10"><a href="#cb5-10"></a>                </span>
+<span id="cb5-11"><a href="#cb5-11"></a>      <span class="co"># mount output location from the docker image</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>      <span class="ex">-v</span> <span class="va">${data_location}</span>/pipeline_output:/Genotype_QC_pipeline/5.pipeline_output \</span>
+<span id="cb5-13"><a href="#cb5-13"></a>                        </span>
+<span id="cb5-14"><a href="#cb5-14"></a>      <span class="co"># at the start of docker, execute this script. </span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>      <span class="ex">--entrypoint</span>=/Genotype_QC_pipeline/3.master_script/run_zCall_QC_pipeline.sh \</span>
+<span id="cb5-16"><a href="#cb5-16"></a>                                </span>
+<span id="cb5-17"><a href="#cb5-17"></a>      <span class="co"># name of docker image to run. This may require changing if the user labels the image differently to COPILOT:latest</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a>      <span class="ex">COPILOT</span>:latest \</span>
+<span id="cb5-19"><a href="#cb5-19"></a>                                        </span>
+<span id="cb5-20"><a href="#cb5-20"></a>      <span class="co"># inputs required for the &quot;Genotype_QC_pipeline/3.master_script/run_zCall_QC_pipeline.sh&quot; script within docker</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a>      <span class="ex">/Genotype_QC_pipeline/4.data/</span><span class="va">${manifest_file}</span> <span class="kw">\</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a>      <span class="ex">/Genotype_QC_pipeline/4.data/</span><span class="va">${clinical_gender}</span> <span class="kw">\</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a>      <span class="ex">/Genotype_QC_pipeline/4.data/</span><span class="va">${report_file}</span> <span class="kw">\</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a>      <span class="va">${sample_call_rate}</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Save changes to the script and run the execution script:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./COPILOT_execution.sh</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">./COPILOT_execution.sh</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Error checking. Check the “QC_logfile.txt” file for any errors after the pipeline has finished.</li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">&quot;error&quot;</span> QC_logfile.txt</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">grep</span> <span class="st">&quot;error&quot;</span> QC_logfile.txt</span></code></pre></div>
 <p>The example data takes 54 minutes to run on a machine with 6 dual cores and 32GB ram.</p>
 </div>
 <div id="copilot-output" class="section level1">
@@ -452,30 +360,27 @@
 </div>
 </div>
 
-   
-   
-            
-      
 
-  <script>
-    $(document).ready(function () {
-
-			
- 		
-	    });
-  </script>
+</div>
 
 
 
-    <!-- dynamically load mathjax for compatibility with self-contained -->
-  <script>
-    (function () {
-	var script = document.createElement("script");
-	script.type = "text/javascript";
-	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-	document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-  </script>
-  
+
+<script>
+$(document).ready(function () {
+ 	  });
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
 </body>
 </html>

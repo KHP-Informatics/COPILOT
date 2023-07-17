@@ -17,13 +17,12 @@ library(downloadthis)
 
 COPILOT is a **C**ontainerised w**O**rkflow for **P**rocessing **IL**lumina gen**O**typing da**T**a. The container is deployable on multiple platforms and allows users to quickly and effortlessly prepare, pre-process and understand Illumina microarray SNP data for data analysis through an informative and interactive summary report. 
 
-# DOWNLOAD EXAMPLE DATA
+# DOWNLOAD 
 
-The docker image and dummy files to test out the pipeline can be downloaded [here](https://doi.org/10.18742/22680079). You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]. The
-
-<br />
+The pipeline and example files can be downloaded [here](https://doi.org/10.18742/22680079). 
 
 **If there any issues with the following links then please email me at hamel.patel@kcl.ac.uk**
+
 
 # GENERATE USER SPECIFIC DATA
 
