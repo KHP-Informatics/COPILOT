@@ -17,15 +17,12 @@ COPING is a containerised workflow for processing Illumina genotyping data. The 
 
 # DOWNLOAD EXAMPLE DATA
 
-The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]
+The docker image and dummy files to test out the pipeline can be downloaded [here](https://doi.org/10.18742/22680079). You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]. The
 
-1. [COPING docker image]()
-2. [example genomeStudio report_file]()
-3. [example gender file]()
-4. [example Illumina manifest file]()
-5. [coping execution file]()
+<br />
 
 **If there any issues with the following links then please email me at hamel.patel@kcl.ac.uk**
+
 
 # GENERATE USER SPECIFIC DATA
 
