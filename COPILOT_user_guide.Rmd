@@ -19,90 +19,11 @@ COPILOT is a **C**ontainerised w**O**rkflow for **P**rocessing **IL**lumina gen*
 
 # DOWNLOAD EXAMPLE DATA
 
-The following download links provides the files required for the following tutorial. You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]. **To download the files right click -> "save link as"**
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-# COPILOT image
-download_link(
-  link = "https://brcilluminadata.s3.eu-west-1.amazonaws.com/COPILOT/copilot.tar",
-  button_label = "1.COPILOT docker image",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-
-```
-
-<br />
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-# Example GenomeStudio report file
-download_link(
-  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/example_genomestudio_file.txt",
-  button_label = "2.Example GenomeStudio report file",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-
-```
-
-<br />
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-# Example gender file
-download_link(
-  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/example_gender_file.txt",
-  button_label = "3.Example gender file",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-
-```
-
-<br />
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-# Example Illumina manifest file
-download_link(
-  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/HumanCoreExome-24v1-0_A.csv",
-  button_label = "4.Example Illumina manifest file",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-
-```
-
-<br />
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
-# COPILOT execution file
-download_link(
-  link = "https://brcilluminadata.s3-eu-west-1.amazonaws.com/COPILOT/COPILOT_execution.sh",
-  button_label = "5.COPILOT execution file",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-
-```
+The docker image and dummy files to test out the pipeline can be downloaded [here](https://doi.org/10.18742/22680079). You can also use your own data, in which case follow the instructions in [GENERATE USER SPECIFIC DATA]. The
 
 <br />
 
 **If there any issues with the following links then please email me at hamel.patel@kcl.ac.uk**
-
 
 # GENERATE USER SPECIFIC DATA
 
